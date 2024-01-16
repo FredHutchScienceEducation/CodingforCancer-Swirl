@@ -88,4 +88,5 @@
   Output: "....filter(., ajcc_pathologic_stage == 'Stage IV')"
 
 - Class: txt
-  Output: "where each . is replaced by a space"
+  Output: "where each . is replaced by a space, help"
+  
