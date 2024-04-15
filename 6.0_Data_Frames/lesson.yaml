@@ -149,4 +149,7 @@
 
 - Class: txt
   Output: "good work making and accessing data frames!"
+  
+- Class: txt
+  Output: "the secret word of the day is 'the powerhouse' "
 

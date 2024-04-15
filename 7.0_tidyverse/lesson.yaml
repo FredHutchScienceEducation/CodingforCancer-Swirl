@@ -274,5 +274,6 @@
 - Class: txt
   Output: "great work with the tidyverse lesson!"
   
-  
+- Class: txt
+  Output: "the secret word of the day is 'of the cell' "
   
