@@ -121,7 +121,7 @@
 - Class: cmd_question
   Output: "what is the mean odontoblast length for the samples that received VC?"
   CorrectAnswer: "mean(TG_VC$len)"
-  AnswerTests: omnitest(correctExpr = "mean(TG_VC$len)", correctVal = 16.96333)
+  AnswerTests: omnitest(correctExpr = "mean(TG_VC$len)")
   Hint: "use your newly extracted subset of TG"
 
 - Class: cmd_question
@@ -133,7 +133,7 @@
 - Class: cmd_question
   Output: "what is the mean odontoblast length for samples that received OJ?"
   CorrectAnswer: "mean(TG_OJ$len)"
-  AnswerTests: omnitest(correctExpr = "mean(TG_OJ$len)", correctVal = 20.66333)
+  AnswerTests: omnitest(correctExpr = "mean(TG_OJ$len)")
   Hint: "use your newly extracted subset of TG"
 
 - Class: cmd_question
