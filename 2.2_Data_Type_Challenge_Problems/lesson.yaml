@@ -23,7 +23,7 @@
 - Class: cmd_question
   Output: "each chocolate bar costs $1.25, assign the object price with the price of the chocolate bar as a numeric"
   CorrectAnswer: "price <- 1.25"
-  AnswerTests: omitest(correctExpr = "price <- 1.25")
+  AnswerTests: omnitest(correctExpr = "price <- 1.25")
   Hint: "remove the $ sign"
 
 - Class: cmd_question
@@ -73,7 +73,7 @@
   
 - Class: mult_question 
   Output: "but if try either of those calculations you will get an error, why?"
-  AnswerChoices: R can't do math; R is confused; you did not store the right values; the data type of quantity is wrong
+  AnswerChoices: R cannot do math; R is confused; you did not store the right values; the data type of quantity is wrong
   CorrectAnswer: "the data type of quantity is wrong"
   AnswerTests: omnitest(correctVal= "the data type of quantity is wrong")
   Hint: "what types of data can you do math with?"

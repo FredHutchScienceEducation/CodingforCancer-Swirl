@@ -17,8 +17,8 @@
   
 - Class: cmd_question
   Output: "make an object called message and assign it 'congrats!' "
-  CorrectAnswer: "message <- 'congrats' "
-  AnswerTests: omnitest(correctExpr = "message <- 'congrats'")
+  CorrectAnswer: "message <- 'congrats!'"
+  AnswerTests: omnitest(correctExpr = "message <- 'congrats!'")
 
 - Class: txt
   Output: "R can also be used for more complicated calcuations, let's calcualte how many times a heart beats in a year"
@@ -58,8 +58,9 @@
   CorrectAnswer: "upper_bpy <- upper_range*mins_year"
   AnswerTests: omnitest(correctExpr="upper_bpy <- upper_range*mins_year")
   
-- Class: text_question
+- Class: multt_question
   Output: "what is the range of heartbeats per year for an adult? (format: lower range - upper range, no commas)"
+  AnswerChoices: "31536000 - 52560000"; "315360 - 52560"; "1234 - 4321"
   CorrectAnswer: "31536000 - 52560000"
   AnswerTests: omnitest(correctVal= "31536000 - 52560000")
   Hint: "look in your environment pane for stored values"

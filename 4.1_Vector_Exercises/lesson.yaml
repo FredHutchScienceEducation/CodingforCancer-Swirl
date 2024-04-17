@@ -133,9 +133,9 @@
 
 - Class: mult_question
   Output: "is the mean of low_dose_subset higher or lower than the mean of low_dose?"
-  CorrectAnswer: higher
+  CorrectAnswer: lower
   AnswerChoices: higher;lower;same
-  AnswerTests: omnitest(correctVal="higher")
+  AnswerTests: omnitest(correctVal="lower")
   Hint: "scroll up to find the mean of low_dose you calcuated before"
 
 - Class: txt

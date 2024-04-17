@@ -171,7 +171,7 @@
 
 - Class: mult_question
   Output: "what is the median year of diagnosis?"
-  AnswerChoices: 1999; 2013; 2010, 2011
+  AnswerChoices: 1999; 2013; 2010; 2011
   CorrectAnswer: 2011
   AnswerTests: omnitest(correctVal="2011")
   Hint: "look at the summary statistics from your previous command"

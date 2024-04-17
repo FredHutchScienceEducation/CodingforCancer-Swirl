@@ -93,7 +93,7 @@
   AnswerTests: omnitest(correctExpr = "weight_kg*2.2", correctVal= 22)
 
 - Class: cmd_question
-  Output: "now let's assign a new object called weight_lb with the value you got above"
+  Output: "now let's assign a new object called weight_lb with what you calcualted above (weight_kg*2.2)"
   CorrectAnswer: "weight_lb <- weight_kg*2.2"
   AnswerTests: omnitest(correctExpr = "weight_lb <- weight_kg*2.2", correctVal= 22)
   Hint: "see the assignment operator above"

@@ -50,7 +50,7 @@
   Hint: "what is the argument to remove NAs? look a few questions up"
   
 - Class: cmd_question
-  Output: "now calculate the median of more_heights_no_NAs (the subset of more_heights with NAs removed)"
+  Output: "now calculate the median of more_heights_noNAs (the subset of more_heights with NAs removed)"
   CorrectAnswer: median(more_heights_noNA)
   AnswerTests: omnitest(correctExpr= "median(more_heights_noNA)", correctVal="64")
   

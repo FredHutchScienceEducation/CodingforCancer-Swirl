@@ -101,7 +101,7 @@
 - Class: cmd_question
   Output: "Try using mean() to calculate the average of vector_1"
   CorrectAnswer: "mean(vector_1)"
-  AnswerTests: omnitest(correctExpr= "mean(vector_1)", correctVal=2)
+  AnswerTests: omnitest(correctExpr= "mean(vector_1)", correctVal=2.5)
   Hint: "Put vector_1 as the argument of the function"
   
 - Class: txt
