@@ -60,14 +60,14 @@
   
 - Class: mult_question
   Output: "what is the range of heartbeats per year for an adult? (format: lower range - upper range, no commas)"
-  AnswerChoices: "31536000 - 52560000"; "315360 - 52560"; "1234 - 4321"
-  CorrectAnswer: "31536000 - 52560000"
-  AnswerTests: omnitest(correctVal= "31536000 - 52560000")
+  AnswerChoices: 31536000 to 52560000; 315360 to 52560; 1234 to 4321
+  CorrectAnswer: 31536000 to 52560000
+  AnswerTests: omnitest(correctVal= "31536000 to 52560000")
   Hint: "look in your environment pane for stored values"
   
 - Class: cmd_question
   Output: "what is the difference between the upper and lower range of heartbeats per year? calculate this without re-typign the numbers"
-  CorrectAnswer: "upper_bpy - lower_bpy"
+  CorrectAnswer: "upper_bpy - lower_bpy""
   AnswerTests: omnitest(correctExpr = "upper_bpy - lower_bpy")
   Hint: "use your stored values"
   
