@@ -23,7 +23,6 @@
   AnswerTests: omnitest(correctVal = "a variable")
   Hint: "a data frame is a combination of what?"
   
-  
 - Class: txt
   Output: "okay now lets make a data frame!"
   
@@ -71,9 +70,8 @@
   
 - Class: cmd_question
   Output: "make a data frame called books_df, name your columns title, author, and pages"
-  CorrectAnswer: books_df <- data.frame(title = books_title, author = book_authors, pages= book_pages)
+  CorrectAnswer: books_df <- data.frame(title = book_title, author = book_authors, pages= book_pages)
   AnswerTests: omnitest(correctExpr = 'books_df <- data.frame(title = book_title, author = book_authors, pages= book_pages)')
-  Hint: "fill in the variable and column names, books_df <- data.frames(column1 = variable1, column2 = variable2, column3 = variable3)"
 
 - Class: txt
   Output: "you just made a data frame!"
