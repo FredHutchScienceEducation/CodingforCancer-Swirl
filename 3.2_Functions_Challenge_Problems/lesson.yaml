@@ -58,24 +58,25 @@
   Output: "you want to divide the cows into 3 groups for going out to graze, fidn the number of cows in each group and assign it to per_group"
   CorrectAnswer: per_group <- total / 3
   AnswerTests: omnitest(correctExpr="per_group <- total/3")
-  Hint: "use the stored value"
+  Hint: "use the stored value per_group"
 
 - Class: cmd_question
   Output: "since you can't have part of a cow, truncate this number to figure out how many cows will be in eaech group"
   CorrectAnswer: trunc(per_group)
-  Hint: "use the stored value"
+  AnswerTests: omnitest(correctExpr = "trunc(per_group)")
+  Hint: "use the stored value per_group"
   
 - Class: mult_question
   Output: "how many cows are in each group?"
   AnswerChoices: 3;21;32;10
   CorrectAnswer: 10
-  AnswerTests: omnitest(correctVal=10)
+  AnswerTests: omnitest(correctVal= "10")
   
 - Class: cmd_question
   Output: "how many cows are left in your pasture if you put the number stored in per_group into the 3 groups, calculate this and assign it to cows_left"
-  CorrectAnswer: cows_left <- per_group*3
-  AnswerTests: omnitest(correctVal= "cows_left <- per_group*3")
-  Hint: "use the stored value, cows_left should equal cows per group * number of groups"
+  CorrectAnswer: cows_left <- total - trunc(per_group)*3
+  AnswerTests: omnitest(correctExpr= "cows_left <- total - trunc(per_group)*3")
+  Hint: "use the stored value, cows_left should equal total cows - the truncated value of cows per group * number of groups"
   
 - Class: cmd_question
   Output: "print cows_left to see how many cows you have left in the pasture"
@@ -104,19 +105,23 @@
 - Class: cmd_question
   Output: "look up this new function in the help window"
   CorrectAnswer: ?substr
-  AnswerTest: omnitest(correctExpr= "?substr")
+  AnswerTests: omnitest(correctExpr= "?substr")
   Hint: "? is the help operator"
 
 - Class: text_question
   Output: "what does this function do, copy the description from the help window"
   CorrectAnswer: Extract or replace substrings in a character vector.
-  AnswerTest: omnitest(correctVal= "Extract or replace substrings in a character vector.")
+  AnswerTests: omnitest(correctVal= "Extract or replace substrings in a character vector.")
   Hint: "copy and paste the description"
 
 - Class: cmd_question
   Output: "copy this 'cows like to eat grass when they go to pasture' and assign it to the value song"
   CorrectAnswer: song <- "cows like to eat grass when they go to pasture"
   AnswerTests: omnitest(correctExpr = "song <- 'cows like to eat grass when they go to pasture' ")
+  Hint: "it should be in one line, like this song <- 'cows like to eat grass when they go to pasture'" 
+
+- Class: txt
+  Output: "the argument of this function can be found in the help window"
   
 - Class: cmd_question
   Output: "lets take the first 22 characters of that phrase using the substr function"
