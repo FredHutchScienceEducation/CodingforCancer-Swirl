@@ -106,7 +106,7 @@
   Hint: "the output from the previous function is your argument"
   
 - Class: txt
-  Output: "we went through a lot of fucntions today, if you ever need to reference back to the functions we go over check the Coding Help Sheets for each week"
+  Output: "we went through a lot of functions today, if you ever need to reference back to the functions we go over check the Coding Help Sheets for each week"
 
 - Class: txt
   Output: "you don't need to memorize these! use the available resources (ex: Coding Help Sheets, lesson slides, GOOGLE)!"
