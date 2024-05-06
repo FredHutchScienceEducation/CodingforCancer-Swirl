@@ -58,7 +58,7 @@
   CorrectAnswer: "upper_bpy <- upper_range*mins_year"
   AnswerTests: omnitest(correctExpr="upper_bpy <- upper_range*mins_year")
   
-- Class: multt_question
+- Class: mult_question
   Output: "what is the range of heartbeats per year for an adult? (format: lower range - upper range, no commas)"
   AnswerChoices: "31536000 - 52560000"; "315360 - 52560"; "1234 - 4321"
   CorrectAnswer: "31536000 - 52560000"
