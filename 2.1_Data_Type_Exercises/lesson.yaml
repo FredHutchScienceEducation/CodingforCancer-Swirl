@@ -1,6 +1,6 @@
 - Class: meta
   Course: Coding_for_Cancer_swirl
-  Lesson: Lesson 2a Exercises
+  Lesson: 2.1 Basic Data Type Exercises
   Author: Hanako Osuga
   Type: Standard
   Organization: Fred Hutch Cancer Center
@@ -104,10 +104,10 @@
 - Class: txt
   Output: "amazing job assigning and re-assigning objects!"
   
-- Class: text_question
+- Class: mult_question
   Output: "what data type is stored in mass_index?"
-  CorrectAnswer: numerics
-  AnswerTests: val_matches('[N]numeric[s]')  
+  AnswerChoices: numerics; string; logical
+  AnswerTests: omnitest(correctVal = "numerics")
   Hint: "if you can't remember the value check your Environment pane"
 
 - Class: txt

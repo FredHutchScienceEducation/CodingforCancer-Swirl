@@ -16,7 +16,7 @@
   Output: "you work at a bodega that sells candy, a popular item here is the chocolate bar"
 
 - Class: cmd_question
-  Output: "assign an object item with the value 'chocolate bar'"
+  Output: "assign an object, item, with the value 'chocolate bar'"
   CorrectAnswer: "item <- 'chocolate bar' "
   AnswerTests: omnitest(correctExpr= "item <- 'chocolate bar' ")
 
@@ -28,9 +28,9 @@
 
 - Class: cmd_question
   Output: "WA state is a state with sales tax of 6.5%, calculate the total price of the 1 chocolate bar with sales tax, assign this to a new object called with_tax"
-  CorrectAnswer: "with_tax <- price *1.06"
-  AnswerTests: omnitest(correctExpr = "with_tax <- price*1.06")
-  Hint: "use your stored values instead of retyping the price, to get the total price with sales tax multiply the price by 1.06"
+  CorrectAnswer: "with_tax <- price *1.065"
+  AnswerTests: omnitest(correctExpr = "with_tax <- price*1.065")
+  Hint: "use your stored values instead of retyping the price, to get the total price with sales tax multiply the price by 1.065"
 
 - Class: cmd_question
   Output: "how much would it cost to buy 6 chocolate bars BEFORE tax?"
@@ -45,7 +45,7 @@
   Hint: "multiply your stored value for price with tax by the number of chocolate bars"
   
 - Class: cmd_question
-  Output: "the price of the chocolate bar goes down to $1.15 per bar before tax, re-assign price to this new price"
+  Output: "the price of the chocolate bar goes down to $1.15 per bar before tax, re-assign price to what you just calculated"
   CorrectAnswer: "price <- 1.15"
   AnswerTests: omnitest(correctExpr = "price <- 1.15")
   Hint: "re-assignments can be done by overwriting a previous assignment"
@@ -53,9 +53,9 @@
   
 - Class: cmd_question
   Output: "what is the new price with tax per chocolate bar, re-assign with_tax with this new value?"
-  CorrectAnswer: "with_tax <- price*1.06"
-  AnswerTests: omnitest(correctExpr="with_tax <- price*1.06")
-  Hint: "to get the total price with sales tax multiply the price by 1.06"
+  CorrectAnswer: "with_tax <- price*1.065"
+  AnswerTests: omnitest(correctExpr="with_tax <- price*1.065")
+  Hint: "to get the total price with sales tax multiply the price by 1.065"
   
 - Class: txt
   Output: "you receive a large order of chocolate bars, the quantity requested is seventy chocolate bars"
