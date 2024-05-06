@@ -94,7 +94,7 @@
 
 - Class: cmd_question
   Output: "what is the data type of the column dose?"
-  CorrectAnswer: class(TG$len)
+  CorrectAnswer: class(TG$dose)
   AnswerTests: omnitest(correctExpr = "class(TG$dose)")
   Hint: "the function for finding data type is class()"
 
@@ -137,7 +137,7 @@
   Hint: "use your newly extracted subset of TG"
 
 - Class: cmd_question
-  Output: "what is the difference of the mean odontoblast lengths across the OJ and VC group?"
+  Output: "what is the difference of the mean odontoblast lengths between the OJ and VC group?"
   CorrectAnswer: mean(TG_OJ$len) - mean(TG_VC$len)
   AnswerTests: omnitest(correctExpr =  "mean(TG_OJ$len) - mean(TG_VC$len)", correctVal = 3.7)
   Hint: "substract VC from OJ, use your commands instead of retyping the number outputs from above"
