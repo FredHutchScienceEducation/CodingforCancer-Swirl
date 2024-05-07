@@ -176,10 +176,8 @@
   Output: "lets combine the filters from above to filter for RB1_clinical patients
   who have either 'Del' OR 'Loss' in focal.deletion.in.RB1 OR 'yes' in mutation.in.RB1,
   assign this to filter_all"
-  CorrectAnswer: filter_all <-  filter(RB1_clinical, focal.deletion.in.RB1 == "Del" |
-  focal.deletion.in.RB1 == "Loss" | mutation.in.RB1 == "yes")
-  AnswerTests: omnitest(correctExpr = 'filter_all <-  filter(RB1_clinical, focal.deletion.in.RB1 == "Del" |
-  focal.deletion.in.RB1 == "Loss" | mutation.in.RB1 == "yes")' )
+  CorrectAnswer: filter_all <-  filter(RB1_clinical, focal.deletion.in.RB1 == "Del" | focal.deletion.in.RB1 == "Loss" | mutation.in.RB1 == "yes")
+  AnswerTests: omnitest(correctExpr = 'filter_all <-  filter(RB1_clinical, focal.deletion.in.RB1 == "Del" | focal.deletion.in.RB1 == "Loss" | mutation.in.RB1 == "yes")' )
   Hint: "combine the filters from filter2 and filter3 using | for or"
 
 - Class: cmd_question
