@@ -11,7 +11,7 @@
   
 - Class: mult_question
   Output: "what is tidyverse?"
-  AnswerChoices: package; software; app
+  AnswerChoices: package;software;app
   CorrectAnswer: package
   AnswerTests: omnitest(correctVal = "package")
 
@@ -58,14 +58,14 @@
 
 - Class: mult_question
   Output: "what is the data type stored in the mutations.in.TP53 column?"
-  AnswerChoices: numerics; integer; character; logical
+  AnswerChoices: numerics;integer;character;logical
   CorrectAnswer: character
   AnswerTests: omnitest(correctVal = "character")
   Hint: "check the output of your last command"
 
 - Class: mult_question
   Output: "what is the first column in the list that contains NA values?"
-  AnswerChoices: year_at_birth; pack_years_smoked; height; mutations.in.TP53
+  AnswerChoices: year_at_birth;pack_years_smoked;height;mutations.in.TP53
   CorrectAnswer: pack_years_smoked
   AnswerTests: omnitest(correctVal = "pack_years_smoked")
   Hint: "go back to the output for the str() command"
@@ -114,8 +114,8 @@
   
 - Class: cmd_question
   Output: "print sel_columns2 to see your extracted columns"
-  CorrectAnsewr: sel_columns2
-  AnswerTests: omnitest(correctExpr = "sel_colums2")
+  CorrectAnswer: sel_columns2
+  AnswerTests: omnitest(correctExpr = "sel_columns2")
 
 - Class: txt
   Output: "you can also use something called helper functions"
@@ -255,10 +255,11 @@
   Output: "print race_stage2"
   CorrectAnswer: race_stage2
   AnswerTests: omnitest(correctExpr = "race_stage2")
+
   
 - Class: mult_question
-  Output: "compare race_stage and race_stage2, do they look the same or different?"
-  AnswerChoices: same; different
+  Output: compare race_stage and race_stage2, do they look the same or different?
+  AnswerChoices: same;different
   CorrectAnswer: same
   AnswerTests: omnitest(correctVal = "same")
 
