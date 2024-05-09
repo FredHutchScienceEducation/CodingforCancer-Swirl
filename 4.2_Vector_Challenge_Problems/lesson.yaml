@@ -20,7 +20,7 @@
   
 - Class: cmd_question
   Output: "use a function to figure out how many values are in organs"
-  CorrectAnsewr: length(organs)
+  CorrectAnswer: length(organs)
   AnswerTests: omnitest(correctExpr = "length(organs)", correctVal = 3)
   Hint: "what function tells you the length of a vector?"
   
@@ -95,8 +95,9 @@
 
 - Class: mult_question
   Output: "what happened to the value TRUE in num_logical?"
-  AnswerChoices: 'R changed TRUE to 1'; 'no change'; 'magic?'
+  AnswerChoices: R changed TRUE to 1; no change; magic?
   CorrectAnswer: "R changed TRUE to 1"
+  AnswerTests: omnitest(correctVal = "R changed TRUE to 1")
   Hint: "what is the difference between what you entered and what is stored in the vector?"
   
 - Class: cmd_question
@@ -136,7 +137,7 @@
   
 - Class: mult_question
   Output: "what happened to the 5th value in char_logical?"
-  AnswerChoices: "R changed TRUE (logical) to 'TRUE' (character)"; 'no change'; 'R swapped values out')
+  AnswerChoices: R changed TRUE (logical) to 'TRUE' (character); no change; R swapped values out)
   CorrectAnswer: "R changed TRUE (logical) to 'TRUE' (character)"
   AnswerTests: omnitest(correctVal = "R changed TRUE (logical) to 'TRUE' (character)")
   Hint: "what is different about the TRUE you entered and the TRUE R outputted?"
@@ -161,8 +162,9 @@
   
 - Class: mult_question
   Output: "what happened to the value?"
-  AnswerChoices: "R changed a numeric to a character"; "no change"; "R is playing tricks"
+  AnswerChoices: R changed a numeric to a character; no change; R is playing tricks
   CorrectAnswer: "R changed a numeric to a character"
+  AnswerTests: omnitest(correctVal = "R changed a numeric to a character")
 
 - Class: txt
   Output: "R is doing a lot in the background, most of the time you don't need to think about it"

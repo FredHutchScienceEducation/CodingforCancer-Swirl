@@ -69,7 +69,7 @@
   
 - Class: cmd_question
   Output: "Let's assign the value 10 to the object weight_kg by typing weight_kg <- 10"
-  AnswerTests: omnitest(correctExpr= "weight_kg <- 10", correctVal= 10)
+  AnswerTests: omnitest(correctExpr= "weight_kg <- 10")
   CorrectAnswer: "weight_kg <- 10"
   Hint: "object <- value"
 

@@ -55,7 +55,7 @@
   AnswerTests: omnitest(correctExpr="total <- 32")
 
 - Class: cmd_question
-  Output: "you want to divide the cows into 3 groups for going out to graze, fidn the number of cows in each group and assign it to per_group"
+  Output: "you want to divide the cows into 3 groups for going out to graze, find the number of cows in each group and assign it to per_group"
   CorrectAnswer: per_group <- total / 3
   AnswerTests: omnitest(correctExpr="per_group <- total/3")
   Hint: "use the stored value per_group"

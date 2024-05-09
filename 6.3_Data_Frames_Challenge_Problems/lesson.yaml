@@ -78,7 +78,7 @@
   Hint: "check your coding help sheet or Google for the function!"
 
 - Class: txt
-  Output: "lets check these statustics against what R can provide us through the summary statistics"
+  Output: "lets check these statistics against what R can provide us through the summary statistics"
 
 - Class: cmd_question
   Output: "get some summary statistics of TG"

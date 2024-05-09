@@ -12,8 +12,7 @@
 - Class: mult_question
   Output: "what is tidyverse?"
   AnswerChoices: package;software;app
-  CorrectAnswer: package
-  AnswerTests: omnitest(correctVal = "package")
+AnswerTests: omnitest(correctVal = "package")
 
 - Class: txt
   Output: "packages are extensions to R that you can download and use"
@@ -45,7 +44,7 @@
   Output: "when you install you will need quotation marks, but when you load it R already knows that tidyverse means so you don't need quotation marks"
 
 - Class: cmd_question
-  Output: "import thta data set from last time and assign it to clinical"
+  Output: "import the data set from last time and assign it to clinical"
   CorrectAnswer: clinical <- read.csv("data/clinical.csv")
   AnswerTests: omnitest(correctExpr = 'clinical <- read.csv("data/clinical.csv")')
   Hint: "did you download the data from Github last time? if not go back to 6.1 to download it"

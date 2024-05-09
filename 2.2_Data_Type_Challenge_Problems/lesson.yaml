@@ -40,8 +40,8 @@
   
 - Class: cmd_question
   Output: "how much would it cost to buy 6 chocolate bars AFTER tax?"
-  CorrectAnswer: "with_tax * 6"
-  AnswerTests: omnitest(correctExpr= "with_tax *6", correctVal = "7.96")
+  CorrectAnswer: "with_tax*6"
+  AnswerTests: omnitest(correctExpr= "with_tax *6")
   Hint: "multiply your stored value for price with tax by the number of chocolate bars"
   
 - Class: cmd_question

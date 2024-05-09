@@ -67,7 +67,7 @@
   
 - Class: cmd_question
   Output: "what is the difference between the upper and lower range of heartbeats per year? calculate this without re-typign the numbers"
-  CorrectAnswer: "upper_bpy - lower_bpy""
+  CorrectAnswer: "upper_bpy - lower_bpy"
   AnswerTests: omnitest(correctExpr = "upper_bpy - lower_bpy")
   Hint: "use your stored values"
   

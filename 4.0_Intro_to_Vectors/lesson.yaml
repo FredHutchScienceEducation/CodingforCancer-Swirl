@@ -159,13 +159,13 @@
   Output: "Extract the second AND third items in organs"
   CorrectAnswer: "organs[c(2,3)]"
   AnswerTests: omnitest(correctExpr="organs[c(2,3)]")
-  Hint: "Do you want index1 AND index2 or index1 THROUGH index2?"
+  Hint: "Do you want index2 AND index3 or index2 THROUGH index3?"
 
 - Class: txt
   Output: "in the above it technically didn't matter which one you chose (: or ,) because 2 and 3 are next to eachother"
   
 - Class: txt
-  Output: "but if you wanted index 2 AND index 203 but you asked for index 2 THROUGH index 203, it would get you a VERY different output"
+  Output: "but if you wanted index 2 AND index 3 but you asked for index 2 THROUGH index 203, it would get you a VERY different output"
 
 - Class: txt
   Output: "with coding you have to be very specific with what you ask, your computer takes things very literally!"

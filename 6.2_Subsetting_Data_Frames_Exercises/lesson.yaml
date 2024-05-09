@@ -26,7 +26,7 @@
 
 - Class: cmd_question
   Output: "try accessing the first row in clinical"
-  CorrectAnswer:clinical[1,]
+  CorrectAnswer: clinical[1,]
   AnswerTests: omnitest(correctExpr="clinical[1,]")
   Hint: "the format is df[ row, col], remember to leave col blank"
 
@@ -36,7 +36,7 @@
 - Class: cmd_question
   Output: "extract the first column in clinical"
   CorrectAnswer:  clinical[,1]
-  AnswerTest: omnitest(correctExpr="clinical[,1]")
+  AnswerTests: omnitest(correctExpr="clinical[,1]")
   Hint: "leave the row section blank"
 
 - Class: txt
@@ -61,7 +61,7 @@
 - Class: cmd_question
   Output: "try extracting the rows 1 through 3 in the second column of clinical"
   CorrectAnswer: clinical[1:3, 2]
-  AnswerTests: omnitest(correctExpr="clinical[1:3,2]")
+  AnswerTests: omnitest(correctExpr="clinical[1:3, 2]")
   Hint: "use : to show a range, ex: 1 through 5 is 1:5"
 
 - Class: txt
@@ -121,14 +121,14 @@
   Output: "great work getting started on using the clinical data frame"
 
 - Class: txt
-  Question: "lets get some more practice accessing and subsetting the clinical data frame"
+  Output: "lets get some more practice accessing and subsetting the clinical data frame"
 
 - Class: cmd_question
   Output: "extract the column pack_years_smoked using the $ syntax"
   CorrectAnswer: clinical$pack_years_smoked
   AnswerTests: omnitest(correctExpr = "clinical$pack_years_smoked")
   Hint: "take a look at your last command"
-  
+
 - Class: cmd_question
   Output: "now extract the same column, using a different method/syntax"
   CorrectAnswer: clinical["pack_years_smoked"]
@@ -137,6 +137,10 @@
 
 - Class: txt
   Output: "the two commands you just entered are two different ways to do the same thing (extract a column)"
+
+
+
+
 
 - Class: cmd_question
   Output: "extract the first 6 rows for only the 'sample_type', 'ajcc_pathologic_stage', and 'age_at_diagnosis'"
