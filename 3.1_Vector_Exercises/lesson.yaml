@@ -34,18 +34,6 @@
   Hint: "the function for making vectors is c()"
 
 - Class: cmd_question
-  Output: "how many values are in organs? use the function from class to calculate"
-  CorrectAnswer: length(organs)
-  AnswerTests: omnitest(correctExpr="length(organs)", correctVal="3")
-  Hint: "the function for determining length of a vector is length()"
-
-- Class: cmd_question
-  Output: "what type of data is in organs? use the function from class to determine"
-  CorrectAnswer: class(organs)
-  AnswerTests: omnitest(correctExpr="class(organs)", correctVal="character")
-  Hint: "the function for determining vector data type is class()"
-
-- Class: cmd_question
   Output: 'add "ovaries" to the end of the vector organs'
   CorrectAnswer: organs <- c(organs, "ovaries")
   AnswerTests: omnitest(correctExpr= 'organs <- c(organs, "ovaries")')
@@ -88,27 +76,6 @@
   Output: "Source: Crampton, E. W. (1947). The growth of the odontoblast of the incisor teeth as a criterion of vitamin C intake of the guinea pig. The Journal of Nutrition, 33(5), 491â€“504. doi: 10.1093/jn/33.5.491."
   
 - Class: cmd_question
-  Output: "how many elements are in low_dose?"
-  CorrectAnswer: length(low_dose)
-  AnswerTests: omnitest(correctExpr="length(low_dose)", correctVal="10")
-  
-- Class: cmd_question
-  Output: "how about high_dose?"
-  CorrectAnswer: length(high_dose)
-  AnswerTests: omnitest(correctExpr="length(high_dose)", correctVal="10")
-  
-- Class: cmd_question
-  Output: "what is the mean of low_dose?"
-  CorrectAnswer: mean(low_dose)
-  AnswerTests: omnitest(correctExpr="mean(low_dose)", correctVal="22.7")
-  Hint: "the function for mean is mean()"
-  
-- Class: cmd_question
-  Output: "what about the mean of high_dose?"
-  CorrectAnswer: mean(high_dose)
-  AnswerTests: omnitest(correctExpr="mean(high_dose)", correctVal="26.06")
-  
-- Class: cmd_question
   Output: "what is the 5th element in low_dose?"
   CorrectAnswer: low_dose[5]
   AnswerTests: omnitest(correctExpr="low_dose[5]", correctVal="20")
@@ -121,22 +88,46 @@
   Hint: ", is the operator for AND, : is the operator for THROUGH"
 
 - Class: cmd_question
-  Output: "create a new variable called low_dose_subset and assing it the subset you created above"
+  Output: "create a new variable called low_dose_subset and assign it the subset you created above"
   CorrectAnswer: low_dose_subset <- low_dose[1:5]
   AnswerTests: omnitest(correctExpr= "low_dose_subset <- low_dose[1:5]")
   Hint: "the assignment operator is <-"
 
 - Class: cmd_question
-  Output: "what is the mean of low_dose_subset?"
-  CorrectAnswer: mean(low_dose_subset)
-  AnswerTests: omnitest(correctExpr="mean(low_dose_subset)")
+  Output: "what is the 7th element in high_dose?"
+  CorrectAnswer: high_dose[7]
+  AnswerTests: omnitest(correctExpr = 'high_dose[7]')
+  Hint: "use the accessor we learned about today"
 
-- Class: mult_question
-  Output: "is the mean of low_dose_subset higher or lower than the mean of low_dose?"
-  CorrectAnswer: lower
-  AnswerChoices: higher;lower;same
-  AnswerTests: omnitest(correctVal="lower")
-  Hint: "scroll up to find the mean of low_dose you calcuated before"
+- Class: cmd_question
+  Output: "subset the 3rd THROUGH 10th element of high_dose"
+  CorrectAsnwer: high_dose[3:10]
+  AnswerTests: omnitest(correctExpr = "high_dose[3:10]")
+  Hint: ", is the operator for AND, : is the operator for THROUGH"
+  
+- Class: cmd_question
+  Output: "create a varible called high_dose_subset and assign the subset you created above"
+  CorrectAnswer: high_dose_subset <- high_dose[3:10]
+  AnswerTests: omnitest(correctExpr = "high_dose_subset <- high_dose[3:10]")
+  Hint: "the assignment operator is <-"
+
+- Class: cmd_question
+  Output: "what is the 9th element of high_dose?"
+  CorrectAsnwer: high_dose[9]
+  AnswerTests: omnitest(correctExpr = "high_dose[9]")
+  Hint: "use the accessor []"
+  
+- Class: cmd_question
+  Output: "subset high_dose to EXCLUDE the 9th element"
+  CorrectAnswer: high_dose[-9]
+  AnswerTests: omnitest(correctExpr =  "high_dose[-9]")
+  Hint: "negative numbers are used to exclude those positions"
+  
+- Class: cmd_question
+  Output: "now make a subset of high_dose that EXCLUDES the 6th THROUGH 9th elements"
+  CorrectAnswer: high_dose[-6:-9]
+  AnswerTests: omnitest(correctExpr = "high_dose[-6:-9]")
+  Hint: "combine THROUGH and EXCLUDE"
 
 - Class: txt
   Output: "nice work creating and using vectors!"

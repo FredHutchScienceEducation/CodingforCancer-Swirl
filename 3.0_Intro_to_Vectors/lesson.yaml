@@ -46,18 +46,6 @@
   Hint: "The Environment Pane is in the top right window"
 
 - Class: txt
-  Output: "Vectors are useful because we can apply funtions to modify the contents"
-  
-- Class: txt
-  Output: "The function length() tells us the number of items in the vector"
-
-- Class: cmd_question
-  Output: "Try using length() to find the length of vector_1"
-  CorrectAnswer: 3
-  AnswerTests: omnitest(correctExpr= "length(vector_1)", correctVal=3)
-  Hint: "Put vector_1 as the argument of the function"
-  
-- Class: txt
   Output: "you can add values to the end of a vector by entering vector <- c(vector, new value)"
 
 - Class: cmd_question
@@ -85,24 +73,6 @@
   Output: "print vector_1 to check"
   CorrectAnswer: vector_1
   AnswerTests: omnitest(correctExpr="vector_1")
- 
-- Class: txt
-  Output: "The function class() tells you the types of objects that are stored in the vector"
-
-- Class: cmd_question
-  Output: "Try using class() to determine the types of objects stored in vector_1"
-  CorrectAnswer: "class(vector_1)"
-  AnswerTests: omnitest(correctExpr="class(vector_1)", correctVal= "numeric")
-  Hint: "Put vector_1 as the argument of the function"
-  
-- Class: txt
-  Output: "The function mean() calculates the averages of a vector of numbers"
-
-- Class: cmd_question
-  Output: "Try using mean() to calculate the average of vector_1"
-  CorrectAnswer: "mean(vector_1)"
-  AnswerTests: omnitest(correctExpr= "mean(vector_1)", correctVal=2.5)
-  Hint: "Put vector_1 as the argument of the function"
   
 - Class: txt
   Output: "Each element in a vector has an associated index that can be used as a reference"
