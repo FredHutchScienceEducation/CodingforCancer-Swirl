@@ -130,6 +130,60 @@
   Hint: "you want to extract the 1st through the 22nd characters"
 
 - Class: txt
+  Output: "lets go back to the ToothGrowth dataset and the low_dose and high_dose vectors from earlier"
+  
+- Class: cmd_question
+  Output: "what is the median of high_dose?"
+  CorrectAnswer: median(high_dose)
+  AnswerTests: omnitest(correctExpr = "median(high_dose)")
+  Hint: "the function for calculating the median is median()"
+  
+- Class: cmd_question
+  Output: "what is the median of low_dose?"
+  CorrectAnswer: median(low_dose)
+  AnswerTests: omnitest(correctExpr = "median(low_dose)")
+  Hint: "the function for calcuating the median is median()"
+  
+- Class: txt
+  Output: "lets try changing the vectors"
+  
+- Class: cmd_question
+  Output: "subset high_dose and exclude the 10th element and call this new subset high_dose_subset"
+  CorrectAnswer: high_dose_subset <- high_dose[-10]
+  AnswerTests: omnitest(correctExpr = "high_dose_subset <- high_dose[-10]"
+  Hint: "a negative index removes that value"
+  
+- Class: cmd_question
+  Output: "subset low_dose and exclude the first element, call this new subset low_dose_subset"
+  CorrectAnswer: low_dose_subset <- low_dose[-1]
+  AnswerTests: omnitest(correctExpr = "low_dose_subset <- low_dose[-1]")
+  Hint: "a negative index removes that value"
+  
+- Class: cmd_question
+  Output: "what is the median of high_dose_subset?"
+  CorrectAnswer: median(high_dose_subset)
+  AnswerTests: omnitest(correctExpr = "median(high_dose_subset)")
+
+- Class: cmd_question
+  Output: "what is the median of low_dose_subset?"
+  CorrectAnswer: median(low_dose_subset)
+  AnswerTests: omnitest(correctExpr = "median(low_dose_subset)")
+  
+- Class: mult_question
+  Output: "which has a higher median, low_dose or low_dose_subset?"
+  AnswerChoices: low_dose; low_dose_subset
+  CorrectAnswer: low_dose_subset
+  AnswerTests: omnitest(correctVal = "low_dose_subset")
+  Hint: "compare the values you calculated"
+  
+- Class: mult_question
+  Output: "which has a higher median, high_dose or high_dose_subset?"
+  AnswerChoices: high_dose; high_dose_subset
+  CorrectAnswer: high_dose_subset
+  AnswerTests: omnitest(correctVal = "high_dose_subset")
+  Hint: "compare the values you calculated"
+  
+- Class: txt
   Output: 'remember if any functions are confusing you can always look them up in R and on the internet!'
   
 - Class: txt

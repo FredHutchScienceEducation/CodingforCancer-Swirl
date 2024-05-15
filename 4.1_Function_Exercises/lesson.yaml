@@ -106,6 +106,52 @@
   Hint: "the output from the previous function is your argument"
   
 - Class: txt
+  Output: "now lets try some functions on vectors from the TG dataset from yesterday"
+    
+- Class: cmd_question
+  Output: "copy this and run it: TG = ToothGrowth"
+  CorrectAnswer: TG = ToothGrowth
+  AnswerTests: omnitest(correctExpr="TG = ToothGrowth")
+  
+- Class: cmd_question 
+  Output: 'copy and run: low_dose=TG[which(TG$supp=="OJ"&TG$dose==1),"len"]'
+  CorrectAnswer: low_dose = TG[which(TG$supp == "OJ" & TG$dose == 1), "len"]
+  AnswerTests: omnitest(correctExpr= 'low_dose = TG[which(TG$supp == "OJ" & TG$dose == 1), "len"]')
+  
+- Class: cmd_question
+  Output: 'copy and run: high_dose=TG[which(TG$supp=="OJ"&TG$dose==2),"len"]'
+  CorrectAnswer: high_dose = TG[which(TG$supp == "OJ" & TG$dose == 2), "len"]
+  AnswerTests: omnitest(correctExpr=' high_dose = TG[which(TG$supp == "OJ" & TG$dose == 2), "len"]')
+  
+- Class: cmd_question
+  Output: "how many elements are in low_dose?"
+  CorrectAnswer: length(low_dose)
+  AnswerTests: omnitest(correctExpr="length(low_dose)", correctVal="10")
+  
+- Class: cmd_question
+  Output: "how about high_dose?"
+  CorrectAnswer: length(high_dose)
+  AnswerTests: omnitest(correctExpr="length(high_dose)", correctVal="10")  
+  
+- Class: cmd_question
+  Output: "what is the mean of low_dose?"
+  CorrectAnswer: mean(low_dose)
+  AnswerTests: omnitest(correctExpr="mean(low_dose)", correctVal="22.7")
+  Hint: "the function for mean is mean()"
+  
+- Class: cmd_question
+  Output: "what about the mean of high_dose?"
+  CorrectAnswer: mean(high_dose)
+  AnswerTests: omnitest(correctExpr="mean(high_dose)", correctVal="26.06")
+  Hint: "replace low_dose from above with high_dose"
+  
+- Class: mult_question
+  Output: "which vector has a higher mean, low_dose or high_dose?"
+  AnswerChoices: high_dose; low_dose
+  CorrectAnswer: high_dose
+  AnswerTests: omnitest(correctVal = "high_dose")
+  
+- Class: txt
   Output: "we went through a lot of functions today, if you ever need to reference back to the functions we go over check the Coding Help Sheets for each week"
 
 - Class: txt
