@@ -26,7 +26,7 @@
   Output: "Above the console is the Source Pane, this is where you can edit and run scripts as well as view datasets. You write code up there that is more complicated and contains notes."
   
 - Class: txt
-  Output: "To the right of the Source Pane is the Environment Pane, this is where you can view objects (datasets, parameters, lists etc) you create or import"
+  Output: "To the right of the Source Pane is the Environment Pane, this is where you can view objects (variables, datasets, parameters, list, etc) you create or import"
 
 - Class: txt
   Output: "Beneath the Environment Pane is the Plots, Packages, and Help Pane. You can view graphs/plots here as well as information on functions and files"
@@ -48,7 +48,7 @@
   Output: "R is like a big calculator. It can do math (and much more)!"
 
 - Class: cmd_question
-  Output: "add 3 and 4 together usign the '+' operator, just like in math class"
+  Output: "add 3 and 4 together using the '+' operator, just like in math class"
   AnswerTests: omnitest(correctExpr="3+4", correctVal=7)
   CorrectAnswer: "3+4"
   Hint: "remember R can be like a calculator"

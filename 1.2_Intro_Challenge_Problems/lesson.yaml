@@ -49,24 +49,26 @@
   AnswerTests: omnitest(correctExpr= "mins_year <- mins_day *365")
 
 - Class: cmd_question
-  Output: "now we can mutliply lower_range by mins_year to get the lower range of heart beats per year, and assign it to lower_bpy"
+  Output: "now we can multiply lower_range by mins_year to get the lower range of heart beats per year, and assign it to lower_bpy"
   CorrectAnswer: "lower_bpy <- lower_range*mins_year"
   AnswerTests: omnitest(correctExpr= "lower_bpy <- lower_range*mins_year")
+## TODO, add answer based on value, due to associative property
 
 - Class: cmd_question
   Output: "do the same for upper_range, assign it upper_bpy"
   CorrectAnswer: "upper_bpy <- upper_range*mins_year"
   AnswerTests: omnitest(correctExpr="upper_bpy <- upper_range*mins_year")
-  
+## TODO, add answer based on value, due to associative property  
+
 - Class: mult_question
-  Output: "what is the range of heartbeats per year for an adult? (format: lower range - upper range, no commas)"
+  Output: "what is the range of heartbeats per year for an adult? (lower range - upper range)"
   AnswerChoices: 31536000 to 52560000; 315360 to 52560; 1234 to 4321
   CorrectAnswer: 31536000 to 52560000
   AnswerTests: omnitest(correctVal= "31536000 to 52560000")
   Hint: "look in your environment pane for stored values"
   
 - Class: cmd_question
-  Output: "what is the difference between the upper and lower range of heartbeats per year? calculate this without re-typign the numbers"
+  Output: "what is the difference between the upper and lower range of heartbeats per year? calculate this without re-typing the numbers"
   CorrectAnswer: "upper_bpy - lower_bpy"
   AnswerTests: omnitest(correctExpr = "upper_bpy - lower_bpy")
   Hint: "use your stored values"
