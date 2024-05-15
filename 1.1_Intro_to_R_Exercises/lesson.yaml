@@ -35,10 +35,10 @@
   Output: "R can also be used for more complex analysis by assigning objects a value"
 
 - Class: mult_question
-  Output: "what is the assignemnt operator?"
-  AnswerChoices: <-;=;<;-
+  Output: "what is the assignment operator?"
+  AnswerChoices: <-;&;<;-
   CorrectAnswer: <-
-  AnswerTests: omnitest(correctVal="<-")
+  AnswerTests: omnitest(correctVal="<-" )
   Hint: "what symbol did we use to assign weight_kg in the Lesson Activity?"
 
 - Class: cmd_question
