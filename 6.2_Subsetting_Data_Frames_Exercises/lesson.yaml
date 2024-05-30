@@ -16,40 +16,40 @@
   Output: "generally the format is df[ rows, cols ]"
   
 - Class: cmd_question
-  Output: "extract the value at row 1, column 1 in clinical"
-  CorrectAnswer: clinical[1,1]
-  AnswerTests: omnitest(correctExpr='clinical[1,1]')
-  Hint: "the format is df[ row, col]"
+  Output: "extract the value at row 1, column 1 in penguins"
+  CorrectAnswer: penguins[1,1]
+  AnswerTests: omnitest(correctExpr='penguins[1,1]')
+  Hint: "the format is df[row, col]"
   
 - Class: txt
   Output: "you can use this to access the first row be leaving the column part blank"
 
 - Class: cmd_question
-  Output: "try accessing the first row in clinical"
-  CorrectAnswer: clinical[1,]
-  AnswerTests: omnitest(correctExpr="clinical[1,]")
-  Hint: "the format is df[ row, col], remember to leave col blank"
+  Output: "try accessing the first row in penguins"
+  CorrectAnswer: penguins[1,]
+  AnswerTests: omnitest(correctExpr="penguins[1,]")
+  Hint: "the format is df[row, col], remember to leave col blank"
 
 - Class: txt
   Output: "you can also use this to access an entire column by doing the opposite"
 
 - Class: cmd_question
-  Output: "extract the first column in clinical"
-  CorrectAnswer:  clinical[,1]
-  AnswerTests: omnitest(correctExpr="clinical[,1]")
+  Output: "extract the first column in penguins"
+  CorrectAnswer:  penguins[,1]
+  AnswerTests: omnitest(correctExpr="penguins[,1]")
   Hint: "leave the row section blank"
 
 - Class: txt
   Output: "if you don't include the comma, R will assume you want the column"
 
 - Class: cmd_question
-  Output: "try extracting the first column of clinical, but this time dont use the comma"
-  CorrectAnswer: clinical[1]
-  AnswerTests: omnitest(correctExpr="clinical[1]")
+  Output: "try extracting the first column of penguins, but this time dont use the comma"
+  CorrectAnswer: penguins[1]
+  AnswerTests: omnitest(correctExpr="penguins[1]")
   Hint: "dont use a comma and just enter 1"
 
 - Class: mult_question
-  Output: "take a look at the output for clinical[,1] and clinical[1], do they look the same?"
+  Output: "take a look at the output for penguins[,1] and penguins[1], do they look the same?"
   AnswerChoices: same; different
   CorrectAnswer: same
   AnswerTests: omnitest(correctVal="same")
@@ -59,51 +59,51 @@
   Output: "you can also extract a range of rows and columns by using :"
 
 - Class: cmd_question
-  Output: "try extracting the rows 1 through 3 in the second column of clinical"
-  CorrectAnswer: clinical[1:3, 2]
-  AnswerTests: omnitest(correctExpr="clinical[1:3, 2]")
+  Output: "try extracting the rows 1 through 3 in the second column of penguins"
+  CorrectAnswer: penguins[1:3, 2]
+  AnswerTests: omnitest(correctExpr="penguins[1:3, 2]")
   Hint: "use : to show a range, ex: 1 through 5 is 1:5"
 
 - Class: txt
   Output: "you can exclude things by using -"
   
 - Class: cmd_question
-  Output: "exclude the first column of clinical"
-  CorrectAnswer: clinical[,-1]
-  AnswerTests: omnitest(correctExpr="clinical[,-1]")
+  Output: "exclude the first column of penguins"
+  CorrectAnswer: penguins[,-1]
+  AnswerTests: omnitest(correctExpr="penguins[,-1]")
   Hint: "use the comma"
   
 - Class: cmd_question 
-  Output: "print clinical to compare"
-  CorrectAnswer: clinical
-  AnswerTests: omnitest(correctExpr="clinical")
+  Output: "print penguins to compare"
+  CorrectAnswer: penguins
+  AnswerTests: omnitest(correctExpr="penguins")
 
 - Class: mult_question
-  Output: "look between clinical and clinical[,-1], which column was removed?"
-  AnswerChoices: barcode; project_id; tissue_or_organ_of_origin; primary_diagnosis
-  CorrectAnswer: barcode
-  AnswerTests: omnitest(correctVal="barcode")
+  Output: "look between penguins and penguins[,-1], which column was removed?"
+  AnswerChoices: species; island; year; bill_length_mm
+  CorrectAnswer: species
+  AnswerTests: omnitest(correctVal="species")
   Hint: "look at the first column for both outputs"
 
 - Class: txt
   Output: "to remove a range of rows or columns, use the c() and - to tell R which ones to exclude"
   
 - Class: txt
-  Output: "for example, excluding the first 3 rows would look like clinical[-c(1:3),]"
+  Output: "for example, excluding the first 3 rows would look like penguins[-c(1:3),]"
   
 - Class: cmd_question
   Output: "try excluding the first 100 rows in clinical"
-  CorrectAnswer: clinical[-c(1:100),]
-  AnswerTests: omnitest(correctExpr="clinical[-c(1:100),]")
+  CorrectAnswer: penguins[-c(1:100),]
+  AnswerTests: omnitest(correctExpr="penguing[-c(1:100),]")
 
 - Class: txt
   Output: "you can also extract using the name of columns instead of the number"
 
 - Class: cmd_question
-  Output: "extract the column 'sample_type', by entering the name where you would normally put the column number"
-  CorrectAnswer: clinical['sample_type']
-  AnswerTests: omnitest(correctExpr="clinical['sample_type']")
-  Hint: "replace the column number with 'sample_type' "
+  Output: "extract the column 'flipper_length_mm', by entering the name where you would normally put the column number"
+  CorrectAnswer: species['flipper_length_mm']
+  AnswerTests: omnitest(correctExpr="clinical['flipper_length_mm']")
+  Hint: "replace the column number with 'flipper_length_mm' "
 
 - Class: txt
   Output: "you can also do this with the $ syntax"
@@ -112,40 +112,36 @@
   Output: "the general format is df$col_name"
   
 - Class: cmd_question
-  Output: "try extracting the sample_type column again, this time using the $ syntax"
-  CorrectAnswer: clinical$sample_type
-  AnswerTests: omnitest(correctExpr="clinical$sample_type")
+  Output: "try extracting the flipper_length_mm column again, this time using the $ syntax"
+  CorrectAnswer: penguins$flipper_length_mm
+  AnswerTests: omnitest(correctExpr="penguins$flipper_length_mm")
   Hint: "the general format is df$col_name"
 
 - Class: txt
-  Output: "great work getting started on using the clinical data frame"
+  Output: "great work getting started on using the penguins data frame"
 
 - Class: txt
-  Output: "lets get some more practice accessing and subsetting the clinical data frame"
+  Output: "lets get some more practice accessing and subsetting the penguins data frame"
 
 - Class: cmd_question
-  Output: "extract the column pack_years_smoked using the $ syntax"
-  CorrectAnswer: clinical$pack_years_smoked
-  AnswerTests: omnitest(correctExpr = "clinical$pack_years_smoked")
+  Output: "extract the column year using the $ syntax"
+  CorrectAnswer: penguins$year
+  AnswerTests: omnitest(correctExpr = "penguins$year")
   Hint: "take a look at your last command"
 
 - Class: cmd_question
   Output: "now extract the same column, using a different method/syntax"
-  CorrectAnswer: clinical["pack_years_smoked"]
-  AnswerTests: omnitest(correctExpr = "clinical['pack_years_smoked']")
+  CorrectAnswer: penguins["year"]
+  AnswerTests: omnitest(correctExpr = "penguins['year']")
   Hint: "use [ ]"
 
 - Class: txt
   Output: "the two commands you just entered are two different ways to do the same thing (extract a column)"
 
-
-
-
-
 - Class: cmd_question
-  Output: "extract the first 6 rows for only the 'sample_type', 'ajcc_pathologic_stage', and 'age_at_diagnosis'"
-  CorrectAnswer: clinical[1:6, c("sample_type", "ajcc_pathologic_stage", "age_at_diagnosis")]
-  AnswerTests: omnitest(correctExpr = 'clinical[1:6, c("sample_type", "ajcc_pathologic_stage", "age_at_diagnosis")]')
+  Output: "extract the first 6 rows for only the 'species', 'island', and 'flipper_length_mm'"
+  CorrectAnswer: penguins[1:6, c("species", "island", "flipper_length_mm")]
+  AnswerTests: omnitest(correctExpr = 'penguinsl[1:6, c("species", "island", "flipper_length_mm")]')
   Hint: "what are : and c( ) used to do when subsetting data frames?"
   
 - Class: txt
@@ -155,34 +151,34 @@
   Output: "this should let us do calculations for specific subsets of our data frame"
   
 - Class: cmd_question
-  Output: "calculate the range for cigarettes_per_day"
-  CorrectAnswer: range(clinical$cigarettes_per_day, na.rm= TRUE)
-  AnswerTests: omnitest(correctExpr = "range(clinical$cigarettes_per_day, na.rm= TRUE)")
+  Output: "calculate the range for flipper_length_mm"
+  CorrectAnswer: range(penguins$flipper_length_mm, na.rm= TRUE)
+  AnswerTests: omnitest(correctExpr = "range(penguins$flipper_length_mm, na.rm= TRUE)")
   Hint: "dont forget to remove NAs in your argument"
 
 - Class: cmd_question
-  Output: "now calculate the mean of cigarettes_per_day"
-  CorrectAnswer: mean(clinical$cigarettes_per_day, na.rm= TRUE)
-  AnswerTests: omnitest(correctExpr = "mean(clinical$cigarettes_per_day, na.rm= TRUE)", correctVal = 2.105267)
+  Output: "now calculate the mean of flipper_length_mm"
+  CorrectAnswer: mean(penguins$flipper_length_mm, na.rm= TRUE)
+  AnswerTests: omnitest(correctExpr = "mean(penguins$flipper_length_mm, na.rm= TRUE)", correctVal = 200.9152)
   Hint: "dont forget to remove NAs again!"
   
 - Class: cmd_question
-  Output: "what age is the oldest patient (at diagnosis)? ie what is the max age represented in age_at_diagnosis?"
-  CorrectAnswer: max(clinical$age_at_diagnosis, na.rm = TRUE)
-  AnswerTests: omnitest(correctExpr = "max(clinical$age_at_diagnosis, na.rm = TRUE)", correctVal.= "32872")
+  Output: "what is the largest flipper length? ie what is the max flipper length represented in flipper_length_mm?"
+  CorrectAnswer: max(penguins$flipper_length_mm, na.rm = TRUE)
+  AnswerTests: omnitest(correctExpr = "max(penguins$flipper_length_mm, na.rm = TRUE)", correctVal= "231")
   Hint: "remove those NAs!"
   
 - Class: cmd_question
-  Output: "age_at_diagnosis is in days, so divide the commange you just wrote above by 365 to get the oldest person in years"
-  CorrectAnswer: max(clinical$age_at_diagnosis, na.rm = TRUE)/365
-  AnswerTests: omnitest(correctExpr = "max(clinical$age_at_diagnosis, na.rm = TRUE)/365", correctVal = 90.06027)
+  Output: "flipper length is in mm, lets divide the commande you just wrote above by 10 to get largest flipper in cm"
+  CorrectAnswer: max(penguins$flipper_length_mm, na.rm = TRUE)/10
+  AnswerTests: omnitest(correctExpr = "max(penguins$flipper_length_mm, na.rm = TRUE)*10", correctVal =  '2310')
   Hint: "copy the command from above or hit the up arrow button"
 
 - Class: cmd_question
-  Output: "what age is the youngest patient (at diagnosis) in years? calculate this in one line"
-  CorrectAnswer: min(clinical$age_at_diagnosis, na.rm = TRUE)/365
-  AnswerTests: omnitest(correctExpr = "min(clinical$age_at_diagnosis, na.rm = TRUE)/365", correctVal = 34.40274)
-  Hint: "the youngest patient would have the min age represented in age_at_diagnosis"
+  Output: "what is the length of the smallest flipper in cm? calculate this in one line"
+  CorrectAnswer: min(penguins$flipper_length_mm, na.rm = TRUE)/10
+  AnswerTests: omnitest(correctExpr = "min(penguins$flipper_length_mm, na.rm = TRUE)*10", correctVal = 1720)
+  Hint: "the smallest flipper would have the min flipper length represented in flipper_length_mm"
   
 - Class: txt
   Output: 'great work subsetting and calculating values from a data frame!'
