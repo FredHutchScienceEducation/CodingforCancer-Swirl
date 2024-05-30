@@ -92,7 +92,7 @@
   Output: "for example, excluding the first 3 rows would look like penguins[-c(1:3),]"
   
 - Class: cmd_question
-  Output: "try excluding the first 100 rows in clinical"
+  Output: "try excluding the first 100 rows in penguins"
   CorrectAnswer: penguins[-c(1:100),]
   AnswerTests: omnitest(correctExpr="penguing[-c(1:100),]")
 
@@ -101,8 +101,8 @@
 
 - Class: cmd_question
   Output: "extract the column 'flipper_length_mm', by entering the name where you would normally put the column number"
-  CorrectAnswer: species['flipper_length_mm']
-  AnswerTests: omnitest(correctExpr="clinical['flipper_length_mm']")
+  CorrectAnswer: penguins['flipper_length_mm']
+  AnswerTests: omnitest(correctExpr="penguins['flipper_length_mm']")
   Hint: "replace the column number with 'flipper_length_mm' "
 
 - Class: txt
