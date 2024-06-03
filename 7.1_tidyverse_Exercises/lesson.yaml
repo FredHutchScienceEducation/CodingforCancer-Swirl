@@ -26,10 +26,10 @@
   Hint: "use library() to load"
   
 - Class: cmd_question
-  Output: "load the clinical dataset to get started"
-  CorrectAnswer: clinical <- read.csv('data/clinical.csv')
-  AnswerTests: omnitest(correctExpr = "clinical <- read.csv('data/clinical.csv')")
-  Hint: "use read.csv to load the clinical.csv into the variable clinical"
+  Output: "load the palmerpenguins dataset to get started"
+  CorrectAnswer: library('palmerpenguins')
+  AnswerTests: omnitest(correctExpr = "library('palmerpenguins')")
+  Hint: "use library() to load the palmerpenguins data set from last time"
 
 - Class: txt
   Output: "now that you have your data set and tidyverse loaded, lets get started"
@@ -43,96 +43,82 @@
   Hint: "we want to see the structure, not the data set itself or summary statistics"
 
 - Class: txt
-  Output: "today we are interested in looking at the RB1 gene"
-  
-- Class: txt
-  Output: "the RB1 gene is known to contribute to eye cancers, but we want to see 
-  if it might contribute to bladder cancers"
+  Output: "today we are interested in looking at penguin measurements"
   
 - Class: cmd_question
-  Output: 'lets start by looking at all columns that contain RB1, extract this 
-  and assign it to RB1_all'
-  CorrectAnswer: RB1_all <- select(clinical, contains('RB1'))
-  AnswerTests: omnitest(correctExpr = "RB1_all <- select(clinical, contains('RB1'))")
+  Output: 'lets start by looking at all columns that contain "mm", extract this 
+  and assign it to measurements'
+  CorrectAnswer: measurements <- select(penguins, contains('mm'))
+  AnswerTests: omnitest(correctExpr = "measurements <- select(penguins, contains('mm'))")
   Hint: "use the helper functions!"
   
 - Class: cmd_question
   Output: "take a look at this new data frame using the View() function"
-  CorrectAnswer: View(RB1_all)
-  AnswerTests: omnitest(correctExpr= 'View(RB1_all)')
+  CorrectAnswer: View(measurements)
+  AnswerTests: omnitest(correctExpr= 'measurements')
   
-- Class: mult_question
-  Output: "which one of these columns that contain RB1 contains data as yes/no?"
-  AnswerChoices: mutations.in.RB1; focal.deletion.in.RB1; RB1_expr
-  CorrectAnswer: mutations.in.RB1
-  AnswerTests: omnitest(correctVal = 'mutations.in.RB1')
-  Hint: "look at the data frame you opened earlier"
-
 - Class: cmd_question
-  Output: "now lets look at the columns tissue_or_organ_of_origin THROUGH total.number.Indels, 
-  assign this to cancer_clinical"
-  CorrectAnswer: cancer_clinical <- select(clinical, tissue_or_organ_of_origin:total.number.Indels)
-  AnswerTests: omnitest(correctExpr = "cancer_clinical <- select(clinical, tissue_or_organ_of_origin:total.number.Indels)")
+  Output: "now lets look at the columns body_mass_g THROUGH year, 
+  assign this to penguins_first_half"
+  CorrectAnswer: penguins_first_half <- select(penguins, body_mass_g:year)
+  AnswerTests: omnitest(correctExpr = "penguins_first_half <- select(penguins, body_mass_g:year)")
   Hint: "use : for through"
 
 - Class: txt
   Output: "now lets put those parameters together to make 1 data frame"
 
 - Class: cmd_question
-  Output: "select the columns tissue_or_organ_of_origin THROUGH total.number.Indels
-  AND all columns that contain 'RB1', assign this to RB1_clinical"
-  CorrectAnswer: RB1_clinical <- select(clinical, tissue_or_organ_of_origin:total.number.Indels, contains('RB1'))
-  AnswerTests: omnitest(correctExpr = "RB1_clinical <- select(clinical, tissue_or_organ_of_origin:total.number.Indels, contains('RB1'))" )
-  Hint: "put the parameters in the order its in the question (tissue_or_organ_of_origin THROUGH total.number.Indels THEN contains RB1)"
+  Output: "select the columns body_mass_g THROUGH year
+  AND all columns that contain 'mm', assign this to penguin_data "
+  CorrectAnswer: penguin_data <- select(penguins, body_mass_g:year, contains('mm'))
+  AnswerTests: omnitest(correctExpr = "penguin_data <- select(penguins, body_mass_g:year, contains('mm'))" )
+  Hint: "put the parameters in the order its in the question (body_mass_g THROUGH year THEN contains mm)"
   
 - Class: cmd_question
-  Output: "take a look at RB1_clinical using View()"
-  CorrectAnswer: View(RB1_clinical)
-  AnswerTests: omnitest(correctExpr = "View(RB1_clinical)")
+  Output: "take a look at penguin_data using View()"
+  CorrectAnswer: View(penguin_data)
+  AnswerTests: omnitest(correctExpr = "View(penguin_data)")
 
 - Class: mult_question
-  Output: "which column contains information on the stage of cancer?"
-  AnswerChoices: sample_type; ajcc_pathologic_stage; primary_diagnosis
-  CorrectAnswer: ajcc_pathologic_stage
-  AnswerTests: omnitest(correctVal = "ajcc_pathologic_stage")
+  Output: "which column contains information on the location of the penguin?"
+  AnswerChoices: species; location; island
+  CorrectAnswer: island
+  AnswerTests: omnitest(correctVal = "island")
   Hint: "look at the values in each column"
   
 - Class: txt
   Output: "now that we have the columns we want lets filter the rows to get the data we want to analyze"
   
 - Class: mult_question
-  Output: "go back to your RB1_clinical tab, how many rows are there?"
-  AnswerChoices: 124; 433; 960; 3
-  CorrectAnswer: 433
-  AnswerTests: 433
+  Output: "go back to your penguins_data tab, how many rows are there?"
+  AnswerChoices: 124; 344; 960; 3
+  CorrectAnswer: 344
+  AnswerTests: 344
   Hint: "look at the bottom of the pane or scroll to the bottom"
   
 - Class: cmd_question
-  Output: "filter RB1_clinical to show just the rows that have 'Primary Tumor' in sample_type,
-  assign to filter1"
-  CorrectAnswer: filter1 <- filter(RB1_clinical, sample_type == "Primary Tumor")
-  AnswerTests: omnitest(correctExpr = 'filter1 <- filter(RB1_clinical, sample_type == "Primary Tumor")')
-  Hint: 'what do you want the sample_type columne to equal?'
+  Output: "filter penguins_data to show just the female penguins, assign it to filter1"
+  CorrectAnswer: filter1 <- filter(penguin_data, sex == "female")
+  AnswerTests: omnitest(correctExpr = 'filter1 <- filter(penguin_data, sex == "female")')
+  Hint: 'what do you want the sex column to equal?'
   
 - Class: cmd_question
-  Output: "take a look at the structure of filter1"
-  CorrectAnswer: str(filter1)
+  Output: "take a look at the structure of female_penguin_data"
+  CorrectAnswer: str(filter1)  
   AnswerTests: omnitest(correctExpr = "str(filter1)")
   Hint: "use str()"
   
 - Class: mult_question
-  Output: "how many rows are in fitler1?"
-  AnswerChoices: 433; 414; 32; 104
-  CorrectAnswer: 414
-  AnswerTests: omnitest(correctVal = 414)
-  Hint: "look at the number of obs in the first line of the last output"
+  Output: "how many rows are in filter1?"
+  AnswerChoices: 344; 165; 32; 104
+  CorrectAnswer: 165
+  AnswerTests: omnitest(correctVal = 165)
+  Hint: "its a tibble of rows x columns"
 
 - Class: cmd_question
-  Output: "filter RB1_clinical for patients who have either 'Del' or 'Loss' in the focal.deletion.RB1,
-  assign this to filter2"
-  CorrectAnswer: filter2 <- filter(RB1_clinical, focal.deletion.in.RB1 == 'Del' | focal.deletion.in.RB1 == "Loss")
-  AnswerTests: omnitest(correctExpr = 'filter2 <- filter(RB1_clinical, focal.deletion.in.RB1 == "Del" | focal.deletion.in.RB1 == "Loss")')
-  Hint: "use | for or"
+  Output: "filter penguin_data for penguins who were have a flipper length greater than the median (197.0)" 
+  CorrectAnswer: filter2 <- filter(penguin_data, flipper_length_mm > 197.0)
+  AnswerTests: omnitest(correctExpr = ' filter2 <- filter(penguin_data, flipper_length_mm > 197.0)')
 
 - Class: cmd_question 
   Output: "print filter2"
@@ -141,43 +127,40 @@
 
 - Class: mult_question
   Output: "how many rows are in filter2?"
-  AnswerChoices: 45; 64; 19; 414
-  CorrectAnswer: 64
-  AnswerTests: omnitest(correctVal = 64)
-  Hint: "take the number of rows shown and add the number omitted (skipped), R 
-  will only show a certain number of rows when printing but it will tell you how 
-  many it skipped or omitted from print"
+  AnswerChoices: 45; 230; 166 ; 344
+  CorrectAnswer: 166
+  AnswerTests: omnitest(correctVal = 166)
+  Hint: "a tibble: row x columns"
   
 - Class: cmd_question
-  Output: "now lets filter for rows that have an RB1 mutation (mutation.in.RB1 is 'yes')
+  Output: "now lets filter for rows with a bill length greater than the median (44.45)
   assign this to filter3"
-  CorrectAnswer: filter3 <- filter(RB1_clinical, mutation.in.RB1 == 'yes')
-  AnswerTests: omnitest(correctExpr = "filter3 <- filter(RB1_clinical, mutation.in.RB1 == 'yes')")
+  CorrectAnswer: filter3 <- filter(penguin_data, bill_length_mm > 44.45)
+  AnswerTests: omnitest(correctExpr = "filter3 <- filter(penguin_data, bill_length_mm > 44.45)")
 
 - Class: cmd_question
-  Output: "open up filter3 using View"
+  Output: "open up penguin_data_3 using View"
   CorrectAnswer: View(filter3)
   AnswerTests: omnitest(correctExpr = "View(filter3)")
 
 - Class: mult_question
   Output: "how many rows are in filter3?"
-  AnswerChoices: 64, 70, 414, 18
-  CorrectAnswer: 70
-  AnswerTests: omnitest(correctVal = 70)
+  AnswerChoices: 64; 165; 171; 18
+  CorrectAnswer: 171
+  AnswerTests: omnitest(correctVal = 171)
 
 - Class: txt
-  Output: "remember RB1_clinical is already narrowed down to only show related columns"
+  Output: "remember penguin_data is already narrowed down to only show related columns"
 
 - Class: txt
-  Output: "and what we are interested in looking at is the data of patients who have 
-  deleted or lost RB1 or has a mutation in RB1"
+  Output: "and what we are interested in looking at is the data of penguins who have a bill length OR flipper length greater than the median"
   
 - Class: cmd_question
-  Output: "lets combine the filters from above to filter for RB1_clinical patients
-  who have either 'Del' OR 'Loss' in focal.deletion.in.RB1 OR 'yes' in mutation.in.RB1,
+  Output: "lets combine the filters from above to filter for penguins in penguin_data
+  who have either a flipper length or bill length greater than the median values,
   assign this to filter_all"
-  CorrectAnswer: filter_all <-  filter(RB1_clinical, focal.deletion.in.RB1 == "Del" | focal.deletion.in.RB1 == "Loss" | mutation.in.RB1 == "yes")
-  AnswerTests: omnitest(correctExpr = 'filter_all <-  filter(RB1_clinical, focal.deletion.in.RB1 == "Del" | focal.deletion.in.RB1 == "Loss" | mutation.in.RB1 == "yes")' )
+  CorrectAnswer: filter_all <-  filter(penguin_data, bill_length_mm > 44.45 | flipper_length_mm > 197.0)
+  AnswerTests: omnitest(correctExpr = 'filter_all <-  filter(penguin_data, bill_length_mm > 44.45 | flipper_length_mm > 197.0)' )
   Hint: "combine the filters from filter2 and filter3 using | for or"
 
 - Class: cmd_question
@@ -187,9 +170,10 @@
   
 - Class: mult_question
   Output: "how many rows are in filter_all?"
-  AnswerChoices: 64, 70, 414, 114
-  CorrectAnswer: 114
-  AnswerTests: omnitest(correctVal = 114)
+  AnswerChoices: 64, 206, 414, 114
+  CorrectAnswer: 206
+  AnswerTests: omnitest(correctVal = 206)
+  Hint: "a tibble: row x column"
 
 - Class: txt
   Output: "great work subsetting our dataset, now we have the data that we are interested in!"
