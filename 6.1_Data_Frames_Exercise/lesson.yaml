@@ -27,7 +27,7 @@
 - Class: cmd_question
   Output: "how lets load palmerpenguins using: library(palmerpenguins)"
   CorrectAnswer: library('palmerpenguins')
-  AnswerTests: omnitest(correctExpr = "library(palmerpenguins")
+  AnswerTests: omnitest(correctExpr = "library(palmerpenguins)")
   Hint: 'library(palmerpenguins)'
 
 - Class: cmd_question
