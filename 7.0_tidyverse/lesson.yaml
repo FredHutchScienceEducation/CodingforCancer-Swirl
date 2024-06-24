@@ -12,7 +12,7 @@
 - Class: mult_question
   Output: "what is tidyverse?"
   AnswerChoices: package;software;app
-AnswerTests: omnitest(correctVal = "package")
+  AnswerTests: omnitest(correctVal = "package")
 
 - Class: txt
   Output: "packages are extensions to R that you can download and use"
