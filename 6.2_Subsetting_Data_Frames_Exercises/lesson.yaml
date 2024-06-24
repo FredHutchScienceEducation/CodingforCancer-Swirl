@@ -141,7 +141,7 @@
 - Class: cmd_question
   Output: "extract the first 6 rows for only the 'species', 'island', and 'flipper_length_mm'"
   CorrectAnswer: penguins[1:6, c("species", "island", "flipper_length_mm")]
-  AnswerTests: omnitest(correctExpr = 'penguinsl[1:6, c("species", "island", "flipper_length_mm")]')
+  AnswerTests: omnitest(correctExpr = 'penguins[1:6, c("species", "island", "flipper_length_mm")]')
   Hint: "what are : and c( ) used to do when subsetting data frames?"
   
 - Class: txt

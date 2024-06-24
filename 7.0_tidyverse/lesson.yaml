@@ -22,7 +22,7 @@
   collection of packages"
   
 - Class: txt
-  Output: "todyverse contains readr, dplyr, and ggplot2 but you dont need to
+  Output: "tiyverse contains readr, dplyr, and ggplot2 but you dont need to
   memorize each individual package but it can be helpful when Googling"
 
 - Class: cmd_question 
@@ -46,7 +46,7 @@
 - Class: cmd_question
   Output: "import the data set from last time by loading the palmerpenguins package"
   CorrectAnswer: library('palmerpenguins')
-  AnswerTests: omnitest(correctExpr = ' library('palmerpenguins')')
+  AnswerTests: omnitest(correctExpr = "library('palmerpenguins')")
   Hint: "did you install the palmer penguins data frame last time?"
 
 - Class: cmd_question
