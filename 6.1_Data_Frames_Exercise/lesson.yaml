@@ -40,7 +40,7 @@
   Output: 'there are two data sets in palmer penguins, one is penguins which is a simplified version of penguins_raw'
 
 - Class: cmd_question
-  Output: "view the data you just downloaded using the View() function"
+  Output: "lets view the penguins data frame you just downloaded using the View() function"
   CorrectAnswer: View(penguins)
   AnswerTests: omnitest(correctExpr="View(penguins)")
   Hint: "make sure that the V is capitalized"
