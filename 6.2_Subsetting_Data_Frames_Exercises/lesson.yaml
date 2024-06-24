@@ -94,7 +94,7 @@
 - Class: cmd_question
   Output: "try excluding the first 100 rows in penguins"
   CorrectAnswer: penguins[-c(1:100),]
-  AnswerTests: omnitest(correctExpr="penguing[-c(1:100),]")
+  AnswerTests: omnitest(correctExpr="penguins[-c(1:100),]")
 
 - Class: txt
   Output: "you can also extract using the name of columns instead of the number"
