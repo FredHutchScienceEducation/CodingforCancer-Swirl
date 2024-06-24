@@ -136,11 +136,9 @@
 - Class: txt
   Output: "from this you should see sequential numnbers, each penguin was assigned a number"
   
-- Class: txt
-  Output: "if you want to see the structure of a data frame you can use the function str(data_frame_name), try it on penguins"
 
 - Class: cmd_question
-  Output: "try getting an overview of penguins"
+  Output: "if you want to see the structure of a data frame you can use the function str(data_frame_name), try it on penguins"
   CorrectAnswer: str(penguins)
   AnswerTests: omnitest(correctExpr="str(penguins)")
   Hint: "put in the name of our data frame into the function"
