@@ -82,7 +82,7 @@
 - Class: cmd_question
   Output: "print flippers to see your extracted columns"
   CorrectAnswer: flippers
-  AnswerTests: omnitest(correctExpr = flippers)
+  AnswerTests: omnitest(correctExpr = 'flippers')
   Hint: "type the variable name"
   
 - Class: cmd_question

@@ -27,8 +27,8 @@
   
 - Class: cmd_question
   Output: "load the palmerpenguins dataset to get started"
-  CorrectAnswer: library('palmerpenguins')
-  AnswerTests: omnitest(correctExpr = "library('palmerpenguins')")
+  CorrectAnswer: library(palmerpenguins)
+  AnswerTests: omnitest(correctExpr = "library(palmerpenguins)")
   Hint: "use library() to load the palmerpenguins data set from last time"
 
 - Class: txt
@@ -55,7 +55,7 @@
 - Class: cmd_question
   Output: "take a look at this new data frame using the View() function"
   CorrectAnswer: View(measurements)
-  AnswerTests: omnitest(correctExpr= 'measurements')
+  AnswerTests: omnitest(correctExpr= 'View(measurements)')
   
 - Class: cmd_question
   Output: "now lets look at the columns body_mass_g THROUGH year, 

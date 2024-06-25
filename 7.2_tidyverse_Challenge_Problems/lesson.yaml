@@ -10,7 +10,7 @@
   Output: "welcome to the tidyverse Challenge Problems!"
 
 - Class: txt
-  Output: "we are going to continue working with the clinical data frame using tidyverse"
+  Output: "we are going to continue working with the penguins data frame using tidyverse"
   
 - Class: cmd_question
   Output: "before you begin, you should have tidyverse installed (skip this if you do)"
@@ -51,7 +51,7 @@
 - Class: cmd_question
   Output: "select the columns using their names, assign this to try_1"
   CorrectAnswer: demographics_penguins <- select(penguins_raw, Species, Region, Island, Stage)
-  AnswerTests: omnitest(correctExpr = "demographics_penguins <- select(penguins_raw, Species, Region, Island, Stage)"
+  AnswerTests: omnitest(correctExpr = "demographics_penguins <- select(penguins_raw, Species, Region, Island, Stage)")
   Hint: "make sure your syntax of the column names matches what is in the data frame"
   
 - Class: cmd_question
