@@ -66,7 +66,7 @@
   Output: "what is the first column in the list that contains NA values?"
   AnswerChoices: bill_length_mm; bill_depth_mm; year; body_mass_g
   CorrectAnswer: bill_length_mm
-  AnswerTests: omnitest(correctVal = " bill_length_mm")
+  AnswerTests: omnitest(correctVal = "bill_length_mm")
   Hint: "go back to the output for the str() command"
   
 - Class: txt

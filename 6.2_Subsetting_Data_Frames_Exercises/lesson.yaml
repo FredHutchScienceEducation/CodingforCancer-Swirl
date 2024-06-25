@@ -159,7 +159,7 @@
 - Class: cmd_question
   Output: "now calculate the mean of flipper_length_mm"
   CorrectAnswer: mean(penguins$flipper_length_mm, na.rm= TRUE)
-  AnswerTests: omnitest(correctExpr = "mean(penguins$flipper_length_mm, na.rm= TRUE)", correctVal = 200.9152)
+  AnswerTests: omnitest(correctExpr = "mean(penguins$flipper_length_mm, na.rm= TRUE)")
   Hint: "dont forget to remove NAs again!"
   
 - Class: cmd_question
