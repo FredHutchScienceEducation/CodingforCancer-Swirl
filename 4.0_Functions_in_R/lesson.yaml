@@ -116,6 +116,21 @@
   Output: "what is the new lenght of vector_1?"
   CorrectAnswer: length(vector_1)
   AnswerTests: omnitest(correctExpr = "length(vector_1)"
+
+- Class: txt
+  Output: "there are also math functions we can use"
+  
+- Class: cmd_question
+  Output: "the function mean(), calculates the mean of a vector, try it on vector_1"
+  CorrectAnswer: mean(vector_1)
+  AnswerTests: omnitest(correctExpr = "mean(vector_1)")
+  Hint: "put in vector_1 as the argument"
+  
+- Class: cmd_question
+  Output: "the function median, calculates the median of a vector, try it on vector_1"
+  AnswerTests: median(vector_1)
+  AnswerTests: omnitest(correctExpr = "median(vector_1)")
+  Hint: "put in vector_1 as the argument"
   
 - Class: txt
   Output: "awesome job! the secret word today is 'Fluorine'"
