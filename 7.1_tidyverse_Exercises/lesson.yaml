@@ -80,10 +80,10 @@
   AnswerTests: omnitest(correctExpr = "View(penguin_data)")
 
 - Class: mult_question
-  Output: "which column contains information on the location of the penguin?"
-  AnswerChoices: species; location; island
-  CorrectAnswer: island
-  AnswerTests: omnitest(correctVal = "island")
+  Output: "which is the only column with a depth measurement?"
+  AnswerChoices: bill_depth_mm; sex; bill_length_mm
+  CorrectAnswer: bill_depth_mm
+  AnswerTests: omnitest(correctVal = "bill_depth_mm")
   Hint: "look at the values in each column"
   
 - Class: txt
@@ -103,7 +103,7 @@
   Hint: 'what do you want the sex column to equal?'
   
 - Class: cmd_question
-  Output: "take a look at the structure of female_penguin_data"
+  Output: "take a look at the structure of filter1"
   CorrectAnswer: str(filter1)  
   AnswerTests: omnitest(correctExpr = "str(filter1)")
   Hint: "use str()"
@@ -112,7 +112,7 @@
   Output: "how many rows are in filter1?"
   AnswerChoices: 344; 165; 32; 104
   CorrectAnswer: 165
-  AnswerTests: omnitest(correctVal = 165)
+  AnswerTests: omnitest(correctVal = '165')
   Hint: "its a tibble of rows x columns"
 
 - Class: cmd_question

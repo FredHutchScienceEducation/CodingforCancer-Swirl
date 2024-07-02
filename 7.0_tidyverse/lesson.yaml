@@ -45,8 +45,8 @@
 
 - Class: cmd_question
   Output: "import the data set from last time by loading the palmerpenguins package"
-  CorrectAnswer: library('palmerpenguins')
-  AnswerTests: omnitest(correctExpr = "library('palmerpenguins')")
+  CorrectAnswer: library(palmerpenguins)
+  AnswerTests: omnitest(correctExpr = "library(palmerpenguins)")
   Hint: "did you install the palmer penguins data frame last time?"
 
 - Class: cmd_question
@@ -103,7 +103,7 @@
   
 - Class: cmd_question
   Output: "extract columns between species and sex from penguins
-  assign it to no_year"
+  assign it to penguins_no_year"
   CorrectAnswer: penguins_no_year <- select(penguins, species:sex)
   AnswerTests: omnitest(correctExpr = "penguins_no_year <- select(penguins, species:sex)")
   
@@ -120,7 +120,7 @@
   you want to extract, the format is variable name <- select(df_name, helper_function(argument))"
 
 - Class: cmd_question
-  Output: "lets start with the helper function start_with, extract the column 
+  Output: "lets start with the helper function starts_with, extract the column 
   in penguins that starts with 'bill' and assign it to column_start_bill"
   CorrectAnswer: column_start_bill <- select(penguins, starts_with('bill'))
   AnswerTests: omnitest(correctExpr = " column_start_bill <- select(penguins, starts_with('bill'))" )
@@ -146,14 +146,14 @@
 - Class: cmd_question   
   Output: "next try contains() to extract the column that contains 'length',
   assign it to columns_contains_length"
-  CorrectAnswer: column_contains_length <- select(penguins, contains('length'))
-  AnswerTests: omnitest(correctExpr = "column_contains_length <- select(penguins, contains('length'))")
+  CorrectAnswer: columns_contains_length <- select(penguins, contains('length'))
+  AnswerTests: omnitest(correctExpr = "columns_contains_length <- select(penguins, contains('length'))")
   Hint: "the format is variable <- select(df_name, helper_function(argument))"
 
 - Class: cmd_question
   Output: "print it!"
-  CorrectAnswer: column_contains_length
-  AnswerTests: omnitest(correctExpr = "column_contains_length")
+  CorrectAnswer: columns_contains_length
+  AnswerTests: omnitest(correctExpr = "columns_contains_length")
   
 - Class: txt
   Output: "you can combine conditions and/or helper functions using & or |"
@@ -227,7 +227,7 @@
   Output: "this is one way to get this subset, but you can also combine it into one nested function"
 
 - Class: txt
-  Output: "to nest these function together, stare with the outer function, what happens last"
+  Output: "to nest these function together, start with the outer function, what happens last"
 
 - Class: txt
   Output: "in this case, you want R to select columns, and when you tell R which 
@@ -235,15 +235,15 @@
   the rows you want"
   
 - Class: cmd_question
-  Output: "nest the functions above and assign it to race_stage2"
+  Output: "nest the functions above and assign it to dream_island_no_measurement2"
   CorrectAnswer: dream_island_no_measurement2 <- select(filter(penguins, island == 'Dream'), species, sex, year)
   AnswerTests: omnitest(correctExpr = " dream_island_no_measurement2 <- select(filter(penguins, island == 'Dream'), species, sex, year)")
   Hint: "take the select command from above, replace dream_island with your filter function"
 
 - Class: cmd_question
-  Output: "lets compare the two subsets, print dream_island_no_measurement"
-  CorrectAnswer: dream_island_no_measurement
-  AnswerTests: omnitest(correctExpr = "dream_island_no_measurement")
+  Output: "lets compare the two subsets, print dream_island_no_measurements"
+  CorrectAnswer: dream_island_no_measurements
+  AnswerTests: omnitest(correctExpr = "dream_island_no_measurements")
 
 - Class: cmd_question
   Output: "print dream_island_no_measurement2"

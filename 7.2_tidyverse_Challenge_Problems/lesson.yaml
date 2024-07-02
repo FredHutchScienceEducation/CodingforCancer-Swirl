@@ -50,15 +50,14 @@
   
 - Class: cmd_question
   Output: "select the columns using their names, assign this to try_1"
-  CorrectAnswer: demographics_penguins <- select(penguins_raw, Species, Region, Island, Stage)
-  AnswerTests: omnitest(correctExpr = "demographics_penguins <- select(penguins_raw, Species, Region, Island, Stage)")
+  CorrectAnswer: try_1 <- select(penguins_raw, Species, Region, Island, Stage)
+  AnswerTests: omnitest(correctExpr = "try_1 <- select(penguins_raw, Species, Region, Island, Stage)")
   Hint: "make sure your syntax of the column names matches what is in the data frame"
   
 - Class: cmd_question
   Output: "select the columns by listing their index numbers (3,4,5,6), assign this to try_2"
   CorrectAnswer: try_2 <- select(penguins_raw, c(3,4,5,6))
   AnswerTests: omnitest(correctExpr = "try_2 <- select(penguins_raw, c(3,4,5,6))")
-  
   
 - Class: cmd_question
   Output: "select the columns using their index numbers but dont list them all out, assign this to try_3"
@@ -112,19 +111,19 @@
 - Class: cmd_question
   Output: "calculate the mean body mass in Chinstrap penguins"
   CorrectAnswer: mean(chinstrap_penguins_raw$"Body Mass (g)", na.rm= TRUE)
-  AnswerTests: omnitest(correctExpr = " mean(chinstrap_penguins_raw$"Body Mass (g)", na.rm= TRUE)")
+  AnswerTests: omnitest(correctExpr = 'mean(chinstrap_penguins_raw$"Body Mass (g)", na.rm= TRUE)')
   Hint: "dont forget to remove NAs and remember you can use $ for data frames, use the column name"
   
 - Class: cmd_question
   Output: "now calculate the same mean for Gentoo penguins"
   CorrectAnswer: mean(gentoo_penguins_raw$"Body Mass (g)", na.rm= TRUE)
-  AnswerTests: omnitest(correctExpr ="mean(gentoo_penguins_raw$"Body Mass (g)", na.rm= TRUE)")
+  AnswerTests: omnitest(correctExpr ='mean(gentoo_penguins_raw$"Body Mass (g)", na.rm= TRUE)')
   Hint: "change the subset from the previous command"
 
 - Class: cmd_question
   Output: "now calculate the same for Adelie penguins"
   CorrectAnswer: mean(adelie_penguins_raw$"Body Mass (g)", na.rm= TRUE)
-  AnswerTests: omnitest(correctExpr = " mean(adelie_penguins_raw$"Body Mass (g)", na.rm= TRUE)")
+  AnswerTests: omnitest(correctExpr = 'mean(adelie_penguins_raw$"Body Mass (g)", na.rm= TRUE)')
   Hint: "change the subset from the previous command"
 
 - Class: mult_question
