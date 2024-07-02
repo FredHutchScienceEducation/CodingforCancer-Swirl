@@ -36,7 +36,7 @@
 - Class: txt
   Output: "for the next activity we will use the penguins_raw data frame"
 
-- Class: cmd_quesiton
+- Class: cmd_question
   Output: "view penguins_raw to get familiar with this new data frame"
   CorrectAnswer: View(penguins_raw)
   AnswerTests: omnitest(correctExpr = 'View(penguins_raw)')

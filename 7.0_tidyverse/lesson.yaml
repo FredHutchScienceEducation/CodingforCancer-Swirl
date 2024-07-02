@@ -249,7 +249,6 @@
   Output: "print dream_island_no_measurement2"
   CorrectAnswer: dream_island_no_measurement2
   AnswerTests: omnitest(correctExpr = "dream_island_no_measurement2")
-
   
 - Class: mult_question
   Output: compare dream_island_no_measurement and dream_island_no_measurement2, do they look the same or different?
@@ -258,7 +257,7 @@
   AnswerTests: omnitest(correctVal = "same")
 
 - Class: txt
-  Output: "both ways get you the same output! there are many ways to get the same thing R"
+  Output: "both ways get you the same output! there are many ways to get the same things in R"
   
 - Class: txt
   Output: "nested functions require less actual code but can be harder to format/test"

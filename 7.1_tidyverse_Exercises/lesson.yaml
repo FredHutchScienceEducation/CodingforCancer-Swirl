@@ -116,7 +116,7 @@
   Hint: "its a tibble of rows x columns"
 
 - Class: cmd_question
-  Output: "filter penguin_data for penguins who were have a flipper length greater than the median (197.0)" 
+  Output: "filter penguin_data for penguins who were have a flipper length greater than the median (197.0), assign this to filter2" 
   CorrectAnswer: filter2 <- filter(penguin_data, flipper_length_mm > 197.0)
   AnswerTests: omnitest(correctExpr = ' filter2 <- filter(penguin_data, flipper_length_mm > 197.0)')
 
@@ -147,7 +147,7 @@
   Output: "how many rows are in filter3?"
   AnswerChoices: 64; 165; 171; 18
   CorrectAnswer: 171
-  AnswerTests: omnitest(correctVal = 171)
+  AnswerTests: omnitest(correctVal = '171')
 
 - Class: txt
   Output: "remember penguin_data is already narrowed down to only show related columns"
