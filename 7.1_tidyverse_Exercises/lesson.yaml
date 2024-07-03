@@ -129,7 +129,7 @@
   Output: "how many rows are in filter2?"
   AnswerChoices: 45; 230; 166 ; 344
   CorrectAnswer: 166
-  AnswerTests: omnitest(correctVal = 166)
+  AnswerTests: omnitest(correctVal = '166')
   Hint: "a tibble: row x columns"
   
 - Class: cmd_question
@@ -172,7 +172,7 @@
   Output: "how many rows are in filter_all?"
   AnswerChoices: 64, 206, 414, 114
   CorrectAnswer: 206
-  AnswerTests: omnitest(correctVal = 206)
+  AnswerTests: omnitest(correctVal = '206')
   Hint: "a tibble: row x column"
 
 - Class: txt

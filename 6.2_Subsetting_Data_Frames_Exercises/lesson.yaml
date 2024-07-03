@@ -176,8 +176,8 @@
 
 - Class: cmd_question
   Output: "what is the length of the smallest flipper in cm? calculate this in one line"
-  CorrectAnswer: min(penguins$flipper_length_mm, na.rm = TRUE)*10
-  AnswerTests: omnitest(correctExpr = "min(penguins$flipper_length_mm, na.rm = TRUE)*10")
+  CorrectAnswer: min(penguins$flipper_length_mm, na.rm = TRUE)/10
+  AnswerTests: omnitest(correctExpr = "min(penguins$flipper_length_mm, na.rm = TRUE)/10")
   Hint: "the smallest flipper would have the min flipper length represented in flipper_length_mm"
   
 - Class: txt

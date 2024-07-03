@@ -68,7 +68,7 @@
 - Class: cmd_question
   Output: "select the columns using the [] and :, assign this to try_4"
   CorrectAnswer: try_4 <- penguins_raw[ , 3:6]
-  AnswerTests: omnitest(correctExpr = "try_4 <- penguins_raw[ , 3:6]"
+  AnswerTests: omnitest(correctExpr = "try_4 <- penguins_raw[ , 3:6]")
 
 - Class: cmd_question
   Output: "select the columns using [] but NOT :, assign thsi to try_5"
