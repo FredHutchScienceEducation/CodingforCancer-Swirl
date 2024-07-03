@@ -85,7 +85,7 @@
   Output: "each of these 6 commands above get you the same result but they ask R in different ways"
   
 - Class: cmd_question
-  Output: "now lets create a new object from penguins_raw called chinstrap_penguins_raw, that includes flipper length, culmen length, culmen deapth, body mass, sex, and island columns of chinstrap penguisn only"
+  Output: "now lets create a new object from penguins_raw called chinstrap_penguins_raw, that includes flipper length, culmen length, culmen deapth, body mass, sex, and island columns of chinstrap penguins (Chinstrap penguin (Pygoscelis antarctica)) only"
   CorrectAnswer: chinstrap_penguins_raw <- select(filter(penguins_raw, Species == "Chinstrap penguin (Pygoscelis antarctica)"), "Flipper Length (mm)", "Culmen Length (mm)", "Culmen Depth (mm)", "Body Mass (g)", "Sex", "Island")
   AnswerTests: omnitest(correctExpr = 'chinstrap_penguins_raw <- select(filter(penguins_raw, Species == "Chinstrap penguin (Pygoscelis antarctica)"), "Flipper Length (mm)", "Culmen Length (mm)", "Culmen Depth (mm)", "Body Mass (g)", "Sex", "Island")')
   Hint: "Use the colmn names like in try_6 and use the full value for chinstrap penguin in this data frame"
@@ -97,13 +97,13 @@
   Hint: "dont forget to remove NAs and use the column name!"
   
 - Class: cmd_question
-  Output: "next lets create a new object from penguins_raw called gentoo_penguins_raw, that contains the same columns as before (flipper length, culmen length, culmen deapth, body mass, sex, and island) for Gentoo penguins"
+  Output: "next lets create a new object from penguins_raw called gentoo_penguins_raw, that contains the same columns as before (flipper length, culmen length, culmen deapth, body mass, sex, and island) for Gentoo penguins (Gentoo penguin (Pygoscelis papua))"
   CorrectAnswer: gentoo_penguins_raw <- select(filter(penguins_raw, Species == "Gentoo penguin (Pygoscelis papua)"), "Flipper Length (mm)", "Culmen Length (mm)", "Culmen Depth (mm)", "Body Mass (g)", "Sex", "Island")
   AnswerTests: omnitest(correctExpr = 'gentoo_penguins_raw <- select(filter(penguins_raw, Species == "Gentoo penguin (Pygoscelis papua)"), "Flipper Length (mm)", "Culmen Length (mm)", "Culmen Depth (mm)", "Body Mass (g)", "Sex", "Island")')
   Hint: "look back at your previous command, change filter"
   
 - Class: cmd_question
-  Output: "lastly lets create a new object from penguins_raw called adelie_penguins_raw, that contains the same columns as before (flipper length, culmen length, culmen deapth, body mass, sex, and island) for Adelie penguins"
+  Output: "lastly lets create a new object from penguins_raw called adelie_penguins_raw, that contains the same columns as before (flipper length, culmen length, culmen deapth, body mass, sex, and island) for Adelie penguins (Adelie Penguin (Pygoscelis adeliae))"
   CorrectAnswer: adelie_penguins_raw <- select(filter(penguins_raw, Species == "Adelie Penguin (Pygoscelis adeliae)"), "Flipper Length (mm)", "Culmen Length (mm)", "Culmen Depth (mm)", "Body Mass (g)", "Sex", "Island")
   AnswerTests: omnitest(correctExpr = 'adelie_penguins_raw <- select(filter(penguins_raw, Species == "Adelie Penguin (Pygoscelis adeliae)"), "Flipper Length (mm)", "Culmen Length (mm)", "Culmen Depth (mm)", "Body Mass (g)", "Sex", "Island")')
   Hint: "look back at your previous command, change filter"
@@ -129,7 +129,8 @@
 - Class: mult_question
   Output: "what species of penguin had the highest mean body mass?"
   AnswerChoices: Gentoo; Chinstrap; Adelie
-  CorrectAnswer: "Gentoo"
+  CorrectAnswer: Gentoo
+  AnswerTests: omnitest(correctVal = "Gentoo")
   
 - Class: txt
   Output: "great work on these challenge problems!"

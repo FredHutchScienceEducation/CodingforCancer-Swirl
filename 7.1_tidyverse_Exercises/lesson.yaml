@@ -139,7 +139,7 @@
   AnswerTests: omnitest(correctExpr = "filter3 <- filter(penguin_data, bill_length_mm > 44.45)")
 
 - Class: cmd_question
-  Output: "open up penguin_data_3 using View"
+  Output: "open up filter3 using View"
   CorrectAnswer: View(filter3)
   AnswerTests: omnitest(correctExpr = "View(filter3)")
 
@@ -170,7 +170,7 @@
   
 - Class: mult_question
   Output: "how many rows are in filter_all?"
-  AnswerChoices: 64, 206, 414, 114
+  AnswerChoices: 64; 206; 414; 114
   CorrectAnswer: 206
   AnswerTests: omnitest(correctVal = '206')
   Hint: "a tibble: row x column"
