@@ -6,20 +6,22 @@
   Organization: Fred Hutch Cancer Center
   Version: 2.4.5
 
-- Class: text_question
+- Class: mult_question
   Output: "what did we learn today that can store multiple values?"
+  AnswerChoices: vectors; variables; objects
   CorrectAnswer: vectors
   AnswerTests: omnitest(correctVal="vectors")
   Hint: "the main topic of today's lesson"
   
-- Class: text_question
+- Class: mult_question
   Output: "what is the name of the position of an element in a vector?"
-  CorrectAnswer: "index"
+  AnswerChoices: index; location; assignemnt
+  CorrectAnswer: index
   AnswerTests: omnitest(correctVal="index")
   Hint: "this is the number that's assigned to each element, you can use it to access elements in vectors"
   
 - Class: text_question
-  Output: "what is the operator (symbol) used to access elements within vectors? "
+  Output: "what is the operator (symbol) used to access elements within vectors? type it here "
   CorrectAnswer: "[]"
   AnswerTests: (correctVal="[]")
   Hint: "this symbol is called the accessor"
