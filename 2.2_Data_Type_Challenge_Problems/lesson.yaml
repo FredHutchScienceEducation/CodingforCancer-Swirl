@@ -63,7 +63,7 @@
 - Class: cmd_question
   Output: "make a new object called quantity and assign it 'seventy' "
   CorrectAnswer: "quantity <- 'seventy' "
-  AnswerTests: omnitest(correctExpr="quantity <- 'seventy")
+  AnswerTests: omnitest(correctExpr="quantity <- 'seventy' ")
 
 - Class: txt
   Output: "you are asked to calculate the price of this large order"
