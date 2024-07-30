@@ -19,13 +19,7 @@
   CorrectAnswer: index
   AnswerTests: omnitest(correctVal="index")
   Hint: "this is the number that's assigned to each element, you can use it to access elements in vectors"
-  
-- Class: text_question
-  Output: "what is the operator (symbol) used to access elements within vectors? type it here "
-  CorrectAnswer: "[]"
-  AnswerTests: (correctVal="[]")
-  Hint: "this symbol is called the accessor"
-  
+
 - Class: txt
   Output: "let's try making a vector to practice"
   
@@ -103,7 +97,7 @@
 
 - Class: cmd_question
   Output: "subset the 3rd THROUGH 10th element of high_dose"
-  CorrectAsnwer: high_dose[3:10]
+  CorrectAnswer: high_dose[3:10]
   AnswerTests: omnitest(correctExpr = "high_dose[3:10]")
   Hint: ", is the operator for AND, : is the operator for THROUGH"
   
