@@ -113,7 +113,7 @@
 
 - Class: cmd_question
   Output: "what is the 9th element of high_dose?"
-  CorrectAsnwer: high_dose[9]
+  CorrectAnswer: high_dose[9]
   AnswerTests: omnitest(correctExpr = "high_dose[9]")
   Hint: "use the accessor []"
   
