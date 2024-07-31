@@ -79,7 +79,7 @@
 - Class: cmd_question
   Output: "now make a vector called num_logical with values (1, 2, 3, TRUE)"
   CorrectAnswer: num_logical <- c(1, 2, 3, TRUE)
-  AnswerTests: omnitest(correctExpr = "num_logical <- c(1,2,3, TRUE)", correctVal = "numeric")
+  AnswerTests: omnitest(correctExpr = "num_logical <- c(1,2,3, TRUE)")
 
 - Class: txt
   Output: "what do you expect the data type in num_logical to be?"

@@ -100,7 +100,7 @@
 - Class: cmd_question
   Output: "calculate the price after tax for this large order"
   CorrectAnswer: "with_tax*quantity"
-  AnswerTests: omnitest(correctExpr = "with_tax*quantity", correctVal="85.33")
+  AnswerTests: omnitest(correctExpr = "with_tax*quantity")
   Hint: "the total price for this order is the price multiplied by the quantity"
   
 - Class: txt
