@@ -162,7 +162,7 @@
 - Class: cmd_question
   Output: "what is the 3rd value in tricky (we entered it as a numeric 3)?"
   CorrectAnswer: tricky[3]
-  AnswerTests: omnitest(correctExpr = "tricky[3]", correctVal = '"3"')
+  AnswerTests: omnitest(correctExpr = "tricky[3]")
   
 - Class: mult_question
   Output: "what happened to the value?"
