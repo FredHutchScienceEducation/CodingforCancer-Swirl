@@ -87,7 +87,7 @@
 - Class: cmd_question
   Output: "what is the data type of num_logical?"
   CorrectAnswer: class(num_logical)
-  AnswerTests: omnitest(correcteExpr = "class(num_logical)", correctVal = "numeric")
+  AnswerTests: omnitest(correctExpr = "class(num_logical)")
 
 - Class: txt
   Output: "lets see what R did to keep the data type the same"
