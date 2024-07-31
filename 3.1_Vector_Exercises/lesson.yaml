@@ -72,7 +72,7 @@
   Output: "Source: Crampton, E. W. (1947). The growth of the odontoblast of the incisor teeth as a criterion of vitamin C intake of the guinea pig. The Journal of Nutrition, 33(5), 491â€“504. doi: 10.1093/jn/33.5.491."
   
 - Class: cmd_question
-  Output: "find the 5th element in low_dose?"
+  Output: "find the 5th element in low_dose"
   CorrectAnswer: low_dose[5]
   AnswerTests: omnitest(correctExpr="low_dose[5]", correctVal="20")
   Hint: "the accessor operator is []"
@@ -90,7 +90,7 @@
   Hint: "the assignment operator is <-"
 
 - Class: cmd_question
-  Output: "find the 7th element in high_dose?"
+  Output: "find the 7th element in high_dose"
   CorrectAnswer: high_dose[7]
   AnswerTests: omnitest(correctExpr = 'high_dose[7]')
   Hint: "use the accessor we learned about today"
@@ -108,7 +108,7 @@
   Hint: "the assignment operator is <-"
 
 - Class: cmd_question
-  Output: "find the 9th element of high_dose?"
+  Output: "find the 9th element of high_dose"
   CorrectAnswer: high_dose[9]
   AnswerTests: omnitest(correctExpr = "high_dose[9]")
   Hint: "use the accessor []"
