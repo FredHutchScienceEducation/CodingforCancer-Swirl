@@ -73,7 +73,7 @@
   
 - Class: cmd_question
   Output: "Now let's try removing the argument labels (x= and digits =) from your last line of code"
-  CorrectAnswer: 0
+  CorrectAnswer: round(0, 3.14) 
   AnswerTests: omnitest(correctExpr="round(0, 3.14)", correctVal= 0)
   
 - Class: mult_question
@@ -128,7 +128,7 @@
   
 - Class: cmd_question
   Output: "the function median, calculates the median of a vector, try it on vector_1"
-  AnswerTests: median(vector_1)
+  CorrectAnswer: median(vector_1)
   AnswerTests: omnitest(correctExpr = "median(vector_1)")
   Hint: "put in vector_1 as the argument"
   
