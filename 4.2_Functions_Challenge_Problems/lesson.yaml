@@ -50,7 +50,7 @@
   Output: "now that we know a little bit about trunc(), let's try using it"
 
 - Class: cmd_question
-  Output: "you have 32 cows in a pasture, assign total the number of cows in the entire pasture"
+  Output: "you have 32 cows in a pasture, to a new variable called total assign the number of cows in the entire pasture"
   CorrectAnswer: total <- 32
   AnswerTests: omnitest(correctExpr="total <- 32")
 
@@ -73,7 +73,7 @@
   AnswerTests: omnitest(correctVal= "10")
   
 - Class: cmd_question
-  Output: "how many cows are left in your pasture if you put the number stored in per_group into the 3 groups, calculate this and assign it to cows_left"
+  Output: "how many cows are left in your pasture? subtract the value from above (including trunc) multiplied by 3 from total, assign it to cows_left"
   CorrectAnswer: cows_left <- total - trunc(per_group)*3
   AnswerTests: omnitest(correctExpr= "cows_left <- total - trunc(per_group)*3")
   Hint: "use the stored value, cows_left should equal total cows - the truncated value of cows per group * number of groups"
@@ -115,7 +115,7 @@
   Hint: "copy and paste the description"
 
 - Class: cmd_question
-  Output: "copy this 'cows like to eat grass when they go to pasture' and assign it to the value song"
+  Output: "copy this 'cows like to eat grass when they go to pasture' and assign it to the variable song"
   CorrectAnswer: song <- "cows like to eat grass when they go to pasture"
   AnswerTests: omnitest(correctExpr = "song <- 'cows like to eat grass when they go to pasture' ")
   Hint: "it should be in one line, like this song <- 'cows like to eat grass when they go to pasture'" 
@@ -150,7 +150,7 @@
 - Class: cmd_question
   Output: "subset high_dose and exclude the 10th element and call this new subset high_dose_subset"
   CorrectAnswer: high_dose_subset <- high_dose[-10]
-  AnswerTests: omnitest(correctExpr = "high_dose_subset <- high_dose[-10]"
+  AnswerTests: omnitest(correctExpr = "high_dose_subset <- high_dose[-10]")
   Hint: "a negative index removes that value"
   
 - Class: cmd_question
