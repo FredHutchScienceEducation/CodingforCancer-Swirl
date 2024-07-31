@@ -90,7 +90,7 @@
   Hint: "the assignment operator is <-"
 
 - Class: cmd_question
-  Output: "what is the 7th element in high_dose?"
+  Output: "find the 7th element in high_dose?"
   CorrectAnswer: high_dose[7]
   AnswerTests: omnitest(correctExpr = 'high_dose[7]')
   Hint: "use the accessor we learned about today"
@@ -108,7 +108,7 @@
   Hint: "the assignment operator is <-"
 
 - Class: cmd_question
-  Output: "what is the 9th element of high_dose?"
+  Output: "find the 9th element of high_dose?"
   CorrectAnswer: high_dose[9]
   AnswerTests: omnitest(correctExpr = "high_dose[9]")
   Hint: "use the accessor []"
