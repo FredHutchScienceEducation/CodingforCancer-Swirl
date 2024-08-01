@@ -100,7 +100,7 @@
 - Class: cmd_question
   Output: "we got a new building! add 'Steam Plant' to the end of buildings"
   CorrectAnswer: buildings <- c(buildings, "Steam Plant")
-  AnswerTests: omnnitest(correctExpr='buildings <- c(buildings, "Steam Plant")')
+  AnswerTests: omnitest(correctExpr='buildings <- c(buildings, "Steam Plant")')
   
 - Class: cmd_question
   Output: "subset the vector to show only the name of the building whose name is in Fred Hutchinson Cancer Center"
