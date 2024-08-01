@@ -71,14 +71,14 @@
   Output: "both are correct but one gives you the option to use the new vector with no NAs later"
   
 - Class: cmd_question
-  Output: "identify the elements in more_heights_no_NAs are greater than 67"
-  CorrectAnswer: more_heights_no_NAs[more_heights_no_NAs >67]
-  AnswerTests: omnitest(correctExpr= "more_heights_no_NAs[more_heights_no_NAs >67]")
+  Output: "identify the elements in more_heights_noNA are greater than 67"
+  CorrectAnswer: more_heights_noNA[more_heights_noNA >67]
+  AnswerTests: omnitest(correctExpr= "more_heights_noNA[more_heights_noNA >67]")
   
 - Class: cmd_question
   Output: "find the length of the subset of the vector you found above"
-  CorrectAnswer: length(more_heights_no_NAs[more_heights_no_NAs >67])
-  AnswerTests: omnitest(correctExpr="length(more_heights_no_NAs[more_heights_no_NAs >67])", correctVal="6")
+  CorrectAnswer: length(more_heights_noNA[more_heights_noNA >67])
+  AnswerTests: omnitest(correctExpr="length(more_heights_noNA[more_heights_noNA>67])")
   Hint: "use the subsetting command above as your argument for the function length (i.e. combine them into 1 command)"
   
 - Class: txt
