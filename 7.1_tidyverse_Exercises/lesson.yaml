@@ -172,6 +172,5 @@
 - Class: txt
   Output: "great work subsetting our dataset, now we have the data that we are interested in!"
   
-- Class: txt
-  Output: "if you were continuing with this research project now you can begin your analysis"
+
   
