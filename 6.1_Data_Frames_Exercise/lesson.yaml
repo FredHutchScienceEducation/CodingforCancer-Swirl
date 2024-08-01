@@ -31,8 +31,7 @@
   Hint: 'library(palmerpenguins)'
 
 - Class: cmd_question
-  Output: "copy this and run it to tell R that this is the data we will use: 
-  data (package= 'palmerpenguins')"
+  Output: "copy this and run it to tell R that this is the data we will use: data (package= 'palmerpenguins')"
   CorrectAnswer: data(package= 'palmerpenguins')
   AnswerTests: omnitest(correctExpr = "data(package= 'palmerpenguins')")
   Hint: "data(package= 'palmerpenguins')"

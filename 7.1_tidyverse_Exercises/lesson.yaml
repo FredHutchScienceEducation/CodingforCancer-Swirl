@@ -29,8 +29,7 @@
   Output: "now that you have your data set and tidyverse loaded, lets get started"
 
 - Class: mult_question
-  Output: "if this were a new data set and you wanted to know the structure of it, 
-  what function could you use?"
+  Output: "if this were a new data set and you wanted to know the structure of it, what function could you use?"
   AnswerChoices: summary(); str(); View()
   CorrectAnswer: str()
   AnswerTests: omnitest(correctVal = "str()")
@@ -40,8 +39,7 @@
   Output: "today we are interested in looking at penguin measurements"
   
 - Class: cmd_question
-  Output: 'lets start by looking at all columns that contain "mm", extract this 
-  and assign it to measurements'
+  Output: 'lets start by looking at all columns that contain "mm", extract this and assign it to measurements'
   CorrectAnswer: measurements <- select(penguins, contains('mm'))
   AnswerTests: omnitest(correctExpr = "measurements <- select(penguins, contains('mm'))")
   Hint: "use the helper functions!"
@@ -52,8 +50,7 @@
   AnswerTests: omnitest(correctExpr= 'View(measurements)')
   
 - Class: cmd_question
-  Output: "now lets look at the columns body_mass_g THROUGH year, 
-  assign this to penguins_first_half"
+  Output: "now lets look at the columns body_mass_g THROUGH year, assign this to penguins_first_half"
   CorrectAnswer: penguins_first_half <- select(penguins, body_mass_g:year)
   AnswerTests: omnitest(correctExpr = "penguins_first_half <- select(penguins, body_mass_g:year)")
   Hint: "use : for through"
@@ -62,8 +59,7 @@
   Output: "now lets put those parameters together to make 1 data frame"
 
 - Class: cmd_question
-  Output: "select the columns body_mass_g THROUGH year
-  AND all columns that contain 'mm', assign this to penguin_data "
+  Output: "select the columns body_mass_g THROUGH year AND all columns that contain 'mm', assign this to penguin_data "
   CorrectAnswer: penguin_data <- select(penguins, body_mass_g:year, contains('mm'))
   AnswerTests: omnitest(correctExpr = "penguin_data <- select(penguins, body_mass_g:year, contains('mm'))" )
   Hint: "put the parameters in the order its in the question (body_mass_g THROUGH year THEN contains mm)"
@@ -127,8 +123,7 @@
   Hint: "a tibble: row x columns"
   
 - Class: cmd_question
-  Output: "now lets filter for rows with a bill length greater than the median (44.45)
-  assign this to filter3"
+  Output: "now lets filter for rows with a bill length greater than the median (44.45) assign this to filter3"
   CorrectAnswer: filter3 <- filter(penguin_data, bill_length_mm > 44.45)
   AnswerTests: omnitest(correctExpr = "filter3 <- filter(penguin_data, bill_length_mm > 44.45)")
 
@@ -150,9 +145,7 @@
   Output: "and what we are interested in looking at is the data of penguins who have a bill length OR flipper length greater than the median"
   
 - Class: cmd_question
-  Output: "lets combine the filters from above to filter for penguins in penguin_data
-  who have either a flipper length or bill length greater than the median values,
-  assign this to filter_all"
+  Output: "lets combine the filters from above to filter for penguins in penguin_data who have either a flipper length or bill length greater than the median values,  assign this to filter_all"
   CorrectAnswer: filter_all <-  filter(penguin_data, bill_length_mm > 44.45 | flipper_length_mm > 197.0)
   AnswerTests: omnitest(correctExpr = 'filter_all <-  filter(penguin_data, bill_length_mm > 44.45 | flipper_length_mm > 197.0)' )
   Hint: "combine the filters from filter2 and filter3 using | for or"
@@ -171,6 +164,3 @@
 
 - Class: txt
   Output: "great work subsetting our dataset, now we have the data that we are interested in!"
-  
-
-  
