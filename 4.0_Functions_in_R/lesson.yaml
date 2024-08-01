@@ -23,7 +23,7 @@
   Hint: "Integers are whole numbers, what is the other number data type?"
 
 - Class: cmd_question
-  Output: "Try rounding the numberic 3.14 using the function above by entering 3.14 as an arugment into the ()"
+  Output: "Try rounding the numberic 3.14 using the round() function  by entering 3.14 as an arugment into the ()"
   AnswerTests: omnitest(correctExpr = "round(3.14)", correctVal = 3)
   CorrectAnswer: round(3.14)
   Hint: "add the numeric you want to round into the parantheses"
@@ -113,9 +113,9 @@
   Hint: "the argument for the new value goes after the argument for the vector"
   
 - Class: cmd_question
-  Output: "what is the new lenght of vector_1?"
+  Output: "what is the new lentgh of vector_1?"
   CorrectAnswer: length(vector_1)
-  AnswerTests: omnitest(correctExpr = "length(vector_1)"
+  AnswerTests: omnitest(correctExpr = "length(vector_1)")
 
 - Class: txt
   Output: "there are also math functions we can use"
