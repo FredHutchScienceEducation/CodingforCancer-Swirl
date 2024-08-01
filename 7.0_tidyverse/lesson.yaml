@@ -56,14 +56,14 @@
   Hint: "the function str() can be used to insepct the structure of an R object"
 
 - Class: mult_question
-  Output: "what is the data type stored in the bill_depth column?"
+  Output: "what is the data type stored in the bill_depth column (check your previous output)?"
   AnswerChoices: numerics;integer;character;logical
   CorrectAnswer: numerics
   AnswerTests: omnitest(correctVal = "numerics")
   Hint: "check the output of your last command"
 
 - Class: mult_question
-  Output: "what is the first column in the list that contains NA values?"
+  Output: "what is the first column in the list that contains NA values (check your previous output)?"
   AnswerChoices: bill_length_mm; bill_depth_mm; year; body_mass_g
   CorrectAnswer: bill_length_mm
   AnswerTests: omnitest(correctVal = "bill_length_mm")

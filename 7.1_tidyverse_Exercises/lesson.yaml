@@ -12,12 +12,6 @@
 - Class: txt
   Output: "we are going to continue working with the clinical data frame using
   tidyverse"
-  
-- Class: cmd_question
-  Output: "before you begin, you should have tidyverse installed (skip this if you do)"
-  CorrectAnswer: install.packages("tidyverse")
-  AnswerTests: omnitest(correctExpr = 'install.packages("tidyverse")')
-  Hint: "run install.packages('tidyverse')"
 
 - Class: cmd_question
   Output: "lets load tidyverse"

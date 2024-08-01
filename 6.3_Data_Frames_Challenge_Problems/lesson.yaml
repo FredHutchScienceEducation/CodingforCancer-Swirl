@@ -33,7 +33,7 @@
   Hint: "the function for dimensions is dim()"
   
 - Class: cmd_question
-  Output: "extract first 4 lines of TG"
+  Output: "extract first 4 lines of TG using the head() function"
   CorrectAnswer: head(TG, n=4)
   AnswerTests: omnitest(correctExpr ="head(TG, n=4)")
   Hint: "the function for extracting the first few lines is head()"

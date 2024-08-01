@@ -31,7 +31,8 @@
   Hint: 'library(palmerpenguins)'
 
 - Class: cmd_question
-  Output: "copy this and run it to tell R that this is the data we will use:data (package= 'palmerpenguins')"
+  Output: "copy this and run it to tell R that this is the data we will use: 
+  data (package= 'palmerpenguins')"
   CorrectAnswer: data(package= 'palmerpenguins')
   AnswerTests: omnitest(correctExpr = "data(package= 'palmerpenguins')")
   Hint: "data(package= 'palmerpenguins')"
@@ -168,7 +169,7 @@
   Output: "for numerical columns, it also calcualted the Min, Median, Mean, Max, and quartiles"
 
 - Class: mult_question
-  Output: "what is the median bill length for our data frame?"
+  Output: "what is the median bill length for our data frame (check your summary() output)?"
   AnswerChoices: 44.45; 43.92; 17.30; 39.23
   CorrectAnswer: 44.45
   AnswerTests: omnitest(correctVal="44.45")
