@@ -10,8 +10,7 @@
   Output: "welcome to the tidyverse Exercises!"
 
 - Class: txt
-  Output: "we are going to continue working with the clinical data frame using
-  tidyverse"
+  Output: "we are going to continue working with the clinical data frame using tidyverse"
 
 - Class: cmd_question
   Output: "lets load tidyverse"
