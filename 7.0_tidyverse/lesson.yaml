@@ -25,11 +25,6 @@
   Output: "tiyverse contains readr, dplyr, and ggplot2 but you dont need to
   memorize each individual package but it can be helpful when Googling"
 
-- Class: cmd_question 
-  Output: "lets install the tidyverse package"
-  CorrectAnswer: install.packages("tidyverse")
-  AnswerTests: omnitest(correctExpr = 'install.packages("tidyverse")')
-  Hint: "the function to install a package is install.packages()"
 
 - Class: cmd_question
   Output: "now that we have downloaded tidyverse, load the library/package"

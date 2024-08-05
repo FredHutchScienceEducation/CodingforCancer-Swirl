@@ -19,12 +19,6 @@
   Output: "this data frame can be downloaded as a package called palmerpenguins"
 
 - Class: cmd_question
-  Output: 'copy and run this to install the package: install.packages("palmerpenguins")'
-  CorrectAnswer: install.packages("palmerpenguins")
-  AnswerTests: omnitest(correctExpr = 'install.packages("palmerpenguins")')
-  Hint: 'install.packages("palmerpenguins")'
-  
-- Class: cmd_question
   Output: "how lets load palmerpenguins using: library(palmerpenguins)"
   CorrectAnswer: library('palmerpenguins')
   AnswerTests: omnitest(correctExpr = "library(palmerpenguins)")
