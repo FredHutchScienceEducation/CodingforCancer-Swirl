@@ -45,7 +45,7 @@
 - Class: cmd_question
   Output: "Let's inspect the structure of penguins. Use the str() function on penguins. Type: str(penguins)"
   CorrectAnswer: str(penguins)
-  AnswerTests: omnitest(correctExpr = "str(penguins)"
+  AnswerTests: omnitest(correctExpr = "str(penguins)")
   Hint: "the function str() can be used to insepct the structure of an R object"
 
 - Class: mult_question
