@@ -139,8 +139,8 @@
 - Class: cmd_question   
   Output: "next try contains() to extract the column that contains 'length',
   assign it to columns_contains_length"
-  CorrectAnswer: columns_contains_length <- select(penguins, contains('length'))
-  AnswerTests: omnitest(correctExpr = "columns_contains_length <- select(penguins, contains('length'))")
+  CorrectAnswer: columns_contains_length <- select(penguins, contains("length"))
+  AnswerTests: omnitest(correctExpr = "columns_contains_length <- select(penguins, contains("length"))")
   Hint: "the format is variable <- select(df_name, helper_function(argument))"
 
 - Class: cmd_question
@@ -154,8 +154,8 @@
 - Class: cmd_question
   Output: "extract columns that contain 'length' OR ends with 'mm', assign it 
   to selected_columns_contains_lots "
-  CorrectAnswer: selected_columns_contains_lots <- select(penguins, (contains('length') | ends_with('mm')))
-  AnswerTests: omnitest(correctExpr = "selected_columns_contains_lots <- select(penguins, (contains('length') | ends_with('mm')))")
+  CorrectAnswer: selected_columns_contains_lots <- select(penguins, (contains("length") | ends_with("mm")))
+  AnswerTests: omnitest(correctExpr = "selected_columns_contains_lots <- select(penguins, (contains("length") | ends_with("mm")))")
   Hint: "enclose your helper function with (), but be careful to close all parentheses"
 
 - Class: cmd_question
