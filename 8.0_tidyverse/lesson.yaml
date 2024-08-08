@@ -40,7 +40,7 @@
   Output: "import the data set from last time by loading the palmerpenguins package"
   CorrectAnswer: library(palmerpenguins)
   AnswerTests: omnitest(correctExpr = "library(palmerpenguins)")
-  Hint: "did you install the palmer penguins data frame last time? or check your usage of parentheses or "" marks"
+  Hint: "did you install the palmer penguins package from before? also check your ()"
 
 - Class: cmd_question
   Output: "Let's inspect the structure of penguins. Use the str() function on penguins. Type: str(penguins)"
