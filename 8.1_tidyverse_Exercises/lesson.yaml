@@ -145,8 +145,8 @@
   
 - Class: cmd_question
   Output: "lets combine the filters from above to filter for penguins in penguin_data who have either a flipper length or bill length greater than the median values,  assign this to filter_all"
-  CorrectAnswer: filter_all <-  filter(penguin_data, bill_length_mm > 44.45 | flipper_length_mm > 197.0)
-  AnswerTests: omnitest(correctExpr = 'filter_all <-  filter(penguin_data, bill_length_mm > 44.45 | flipper_length_mm > 197.0)' )
+  CorrectAnswer: filter_all <-  filter(penguin_data, (bill_length_mm > 44.45 | flipper_length_mm > 197.0))
+  AnswerTests: omnitest(correctExpr = 'filter_all <-  filter(penguin_data, (bill_length_mm > 44.45 | flipper_length_mm > 197.0))' )
   Hint: "combine the filters from filter2 and filter3 using | for or"
 
 - Class: cmd_question

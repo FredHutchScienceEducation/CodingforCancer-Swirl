@@ -155,8 +155,8 @@
   Output: "extract columns that contain 'length' OR ends with 'mm', assign it 
   to selected_columns_contains_lots "
   CorrectAnswer: selected_columns_contains_lots <- select(penguins, (contains('length') | ends_with('mm')))
-  AnswerTests: omnitest(correctExpr = "selected_columns_contains_lots <- select(penguins, (contains('length') | ends_with('mm')))", correctExpr = "selected_columns_contains_lots <- select(penguins, contains('length') | ends_with('mm'))")
-  Hint: "enclose your help function with (), but be careful to close all parentheses"
+  AnswerTests: omnitest(correctExpr = "selected_columns_contains_lots <- select(penguins, (contains('length') | ends_with('mm')))")
+  Hint: "enclose your helper function with (), but be careful to close all parentheses"
 
 - Class: cmd_question
   Output: "lets see what we extracted!"
