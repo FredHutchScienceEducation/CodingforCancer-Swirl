@@ -27,7 +27,7 @@
 
 
 - Class: cmd_question
-  Output: "now that we have downloaded tidyverse, load the library/package"
+  Output: "load the tidyverse library/package with. Type: library(tidyverse)"
   CorrectAnswer: library(tidyverse)
   AnswerTests: omnitest(correctExpr = "library(tidyverse)")
   Hint: "the function to load a library is library()"
@@ -35,8 +35,6 @@
 - Class: txt
   Output: "you only need to install the package once but you will need to load it before each session"
 
-- Class: txt
-  Output: "when you install you will need quotation marks, but when you load it R already knows that tidyverse means so you don't need quotation marks"
 
 - Class: cmd_question
   Output: "import the data set from last time by loading the palmerpenguins package"
@@ -45,7 +43,7 @@
   Hint: "did you install the palmer penguins data frame last time?"
 
 - Class: cmd_question
-  Output: "inspect the structure of penguins"
+  Output: "Let's inspect the structure of penguins. Use the str() function on penguins. Type: str(penguins)"
   CorrectAnswer: str(penguins)
   AnswerTests: omnitest(correctExpr = "str(penguins)")
   Hint: "the function str() can be used to insepct the structure of an R object"
@@ -69,7 +67,7 @@
   format is variable <- select(df_name, column_name)"
   
 - Class: cmd_question
-  Output: "extract the column flipper_length_mm from penguins to flippers"
+  Output: "extract the column flipper_length_mm from penguins to an object named flippers"
   CorrectAnswer: flippers <- select(penguins, flipper_length_mm)
   AnswerTests: omnitest(correctExpr = " flippers <- select(penguins, flipper_length_mm)")
   Hint: "check the format above!"
@@ -81,8 +79,8 @@
   Hint: "type the variable name"
   
 - Class: cmd_question
-  Output: "you can extract multiple columns by adding their names to the
-  command, add bill_length_mm and bill_depth_mm to your command above, assign it to flippers_bills"
+  Output: "you can extract multiple columns by adding their names to the select
+  command. Extract flipper_length_mm, bill_length_mm, and bill_depth_mm and assign it to an object named flippers_bills"
   CorrectAnswer: flippers_bills <- select(penguins, flipper_length_mm, bill_length_mm, bill_depth_mm)
   AnswerTests: omnitest(correctExpr = " flippers_bills <- select(penguins, flipper_length_mm, bill_length_mm, bill_depth_mm)")
   Hint: "add the column names after the first column, use commas between column names"
@@ -157,7 +155,7 @@
   Output: "extract columns that contain 'length' OR ends with 'mm', assign it 
   to selected_columns_contains_lots "
   CorrectAnswer: selected_columns_contains_lots <- select(penguins, (contains('length') | ends_with('mm')))
-  AnswerTests: omnitest(correctExpr = "selected_columns_contains_lots <- select(penguins, (contains('length') | ends_with('mm')))")
+  AnswerTests: omnitest(correctExpr = "selected_columns_contains_lots <- select(penguins, (contains('length') | ends_with('mm')))", correctExpr = "selected_columns_contains_lots <- select(penguins, contains('length') | ends_with('mm'))")
   Hint: "enclose your help function with (), but be careful to close all parentheses"
 
 - Class: cmd_question
@@ -192,7 +190,7 @@
   Hint: "if they are recorded after 2008, is year greater than or less than 2008?"
 
 - Class: cmd_question
-  Output: "like columns, you can combine conditions, keep only normal samples 
+  Output: "like columns, you can combine conditions. Keep only normal samples 
   (species == 'Chinstrap') AND the penguin is recorded after 2008,
   assign it to chinstrap_after_2008"
   CorrectAnswer: chinstrap_after_2008 <- filter(penguins, (species == 'Chinstrap') & (year > 2008))
