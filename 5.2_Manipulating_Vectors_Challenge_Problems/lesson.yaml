@@ -38,7 +38,7 @@
   Output: "look in your Environment pane to see this dataset"
   
 - Class: txt
-  Output: "the data you just imported is from the paper Effect of vitamin C on odontoblast growth in guinea pig teet"
+  Output: "the data you just imported is from the paper Effect of vitamin C on odontoblast growth in guinea pig teeth"
   
 - Class: txt
   Output: "Scientists treated guinea pigs with low or high dose vitamin C (via orange juice) for a set period of time and then measured the odontoblast (cells responsible for repairing/maintaing the dentin in your tooth) length (in picometeres)"
@@ -84,7 +84,7 @@
   Output: "now set the value for the last animal to NA"
   CorrectAnswer: fixed_high[length(fixed_high)] <- NA
   AnswerTests: omnitest(correctExpr = "fixed_high[length(fixed_high)] <- NA")
-  Hint: "re-assign the last value in fixed_hgiih as NA"
+  Hint: "re-assign the last value in fixed_high as NA"
   
 - Class: txt
   Output: "moving forward we are going to use the new vectors you made (with some animals removed)"
@@ -135,13 +135,13 @@
   Hint: "how can we access vector values that fit a condition?"
   
 - Class: cmd_question
-  Output: "how many values are greater or equal to 20 and less than or equal to 24 picometers in the low dose group?"
+  Output: "how many values are greater or equal to 20 and less than or equal to 24 picometers in the fixed low dose group?"
   CorrectAnswer: length(fixed_low_noNA[fixed_low_noNA <= 24 & fixed_low_noNA >= 20])
   AnswerTests: omnitest(correctExpr="length(fixed_low_noNA[fixed_low_noNA <= 24 & fixed_low_noNA >= 20])", correctVal = 3)
   Hint: "combine two expressionsn together (e.g. x[x>9 & x<= 14])"
 
 - Class: cmd_question 
-  Output: "how many values are greater or equal to 20 and less than or equal to 24 picometers in the high dose group?"
+  Output: "how many values are greater or equal to 20 and less than or equal to 24 picometers in the fixed high dose group?"
   CorrectAnswer: length(fixed_high_noNA[fixed_high_noNA <= 24 & fixed_high_noNA >= 20])
   AnswerTests: omnitest(correctExpr = "length(fixed_high_noNA[fixed_high_noNA <= 24 & fixed_high_noNA >= 20])", correctVal = 1)
   Hint: "combine two expressionsn together (e.g. x[x>9 & x<= 14])"
